@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="text-message-v1">Back</a>
+  <a class="govuk-back-link" href="text-message-v1-phone">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -52,8 +52,7 @@
             Confirmation text message
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['email'] }}
-            {{ data['phone'] }}
+            {{ data['contact'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="text-message-v1">
@@ -64,7 +63,7 @@
         </div>
       </dl>
 
-      <form action="/confirmation-v1" method="post" novalidate>
+      <form action="/confirmation-v1-phone" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
