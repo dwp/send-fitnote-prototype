@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v4-understanding">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <!DOCTYPE html>
+        <style>
+      .tick {max-width: 15%}
+      .tick {max-height: auto}
+    </style>
+        <img src="/public/images/tick.png" class="tick" alt="tick icon">
+        </html>
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h1 class="govuk-panel__title">
+          Fit note received
+        </h1>
+        <div class="govuk-panel__body">
+          Your reference is your National Insurance number
+        </div>
+      </div>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        Keep your fit note safe, don't throw it away.
+      </p>
+      <p class="govuk-body">
+        You do not need to do anything else, or call to check on its progress. If there's a problem you'll be contacted.
+      </p>
+
+      <p>You will need to keep sending us fit notes as long as you're unfit for work. We will tell you when you can stop sending them. For example, if your fit note is for 14 days, you will need to send us another one when it runs out.</p>
+
+      <p><a href="https://www.gov.uk/done/send-fit-note">What do you think of this service?</a> (takes 30 seconds)</p>
+
+      <p><a href="/start-prototype-v2-help">Send another fit note</a></p>
+
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">Find out about call charges</a>
+        </p>
+
+      </div>
+
+  </div>
+
+  </main>
+
+{% endblock %}

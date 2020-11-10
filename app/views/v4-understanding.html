@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v4-check-your-answers">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Submit your fit note
+              </h1>
+              <div class="govuk-!-padding-bottom-3"></div>
+              <p>Fit notes are created to help during times of short-term illness that prevents your ability to work. If your GP believes that your illness may go beyond your fit note end-date, you may be eligible for Universal Credit.</p>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="understanding" name="understanding" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="understanding">
+                  I understand
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="/v4-confirmation" method="post">
+        <button class="govuk-button" data-module="govuk-button">Submit fit note</button>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">Find out about call charges</a>
+        </p>
+
+      </div>
+
+  </div>
+
+  </main>
+
+{% endblock %}

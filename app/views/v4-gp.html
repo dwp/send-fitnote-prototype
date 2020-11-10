@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v4-address">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="fit-note-request-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How did you get your fit note?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="fit-note-request" name="fit-note-request" type="radio" value="My GP recommended the fit note">
+              <label class="govuk-label govuk-radios__label" for="fit-note-request">
+                My GP recommended the fit note
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="I requested the fit note from my GP">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                I requested the fit note from my GP
+              </label>
+            </div>
+          </div>
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Have you discussed a rehabilitation plan to get back to work?
+                </h1>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="back-to-work" name="back-to-work"" type="radio" value="Yes, with my GP">
+                  <label class="govuk-label govuk-radios__label" for="back-to-work"">
+                    Yes, with my GP
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="back-to-work"-2" name="back-to-work"" type="radio" value="Yes, with my Work Coach">
+                  <label class="govuk-label govuk-radios__label" for="back-to-work"-2">
+                    Yes, with my Work Coach
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="back-to-work"-3" name="back-to-work"" type="radio" value="Yes, with my Employer">
+                  <label class="govuk-label govuk-radios__label" for="back-to-work"-3">
+                    Yes, with my Employer
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="back-to-work"-4" name="back-to-work"" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="back-to-work"-4">
+                    No
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/v4-text-message" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">Find out about call charges</a>
+        </p>
+
+      </div>
+
+  </div>
+
+  </main>
+
+{% endblock %}
