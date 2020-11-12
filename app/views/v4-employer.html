@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v4-gp">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="alternative-role-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Have you discussed temporary alternative roles with your employer?
+              </h1>
+            </legend>
+            <div id="changed-name-hint" class="govuk-hint">
+              Employers can accommodate for short-term sickness by offering alternative, flexible and part-time roles. For example, if you work in manufacturing your employer may have a temporary administrative role available.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alternative-role" name="alternative-role" type="radio" value="My employer can offer me an alternative role">
+                <label class="govuk-label govuk-radios__label" for="alternative-role">
+                  My employer can offer me an alternative role
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alternative-role-2" name="alternative-role" type="radio" value="My employer cannot offer me an alternative role">
+                <label class="govuk-label govuk-radios__label" for="alternative-role-2">
+                  My employer cannot offer me an alternative role
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alternative-role-3" name="alternative-role" type="radio" value="I have not discussed this with my employer">
+                <label class="govuk-label govuk-radios__label" for="alternative-role-3">
+                  I have not discussed this with my employer
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alternative-role-4" name="alternative-role" type="radio" value="I am unable to try an alternative role">
+                <label class="govuk-label govuk-radios__label" for="alternative-role-4">
+                  I am unable to try an alternative role
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+      </div>
+
+      <form class="form" action="/v4-text-message" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">Find out about call charges</a>
+        </p>
+
+      </div>
+
+  </div>
+
+  </main>
+
+{% endblock %}
