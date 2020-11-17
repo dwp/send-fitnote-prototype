@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v5b-start-prototype">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <div class="govuk-form-group">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="do-you-have-a-fit-note-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Do you have a fit note?
+                </h1>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Does your document look like the below image
+              </div>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="do-you-have-a-fit-note" name="do-you-have-a-fit-note" type="radio" value="yes" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="do-you-have-a-fit-note">
+                    Yes
+                  </label>
+                </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="do-you-have-a-fit-note-2" name="do-you-have-a-fit-note" type="radio" value="no" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="do-you-have-a-fit-note-2">
+                    No
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                  <div class="govuk-form-group">
+                    <p>If you have evidence from a medical professional that you are unable to work, but it is not a fit note, it may be one of the following:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a href="#">Med 10</a></li>
+                      <li><a href="#">Isolation note</a></li>
+                      <li><a href="#">A letter from a medical professional</a></li>
+                    </ul>
+
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        Only a fit note can be uploaded and processed by this service. If you do not have a fit note, please arrange an appointment with your doctor.
+                      </strong>
+                    </div>
+
+                    <form class="form" action="/v5b-start-prototype" method="post">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Return to Start Page
+                    </button>
+                    </form>
+
+                    </div>
+                </div>
+
+                </div>
+
+            </fieldset>
+          </div>
+
+          </fieldset>
+        </div>
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
+          <!DOCTYPE html>
+          <style>
+                              .example-fit-note {max-width: 100%}
+                              .example-fit-note {max-height: auto}
+        </style>
+          <center>
+          <img src="/public/images/example-fit-note.png" class="example-fit-note" alt="image of an example fit note">
+          </center>
+          </html>
+
+          <form class="form" action="/v5b-upload" method="post">
+          <div class="govuk-!-padding-bottom-6"></div>
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+          </form>
+        </fieldset>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">Find out about call charges</a>
+        </p>
+
+      </div>
+
+  </div>
+
+  </main>
+
+{% endblock %}
