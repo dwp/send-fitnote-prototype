@@ -1,188 +1,121 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="index">Back to Prototype Versions</a>
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       <h1 class="govuk-heading-xl">
-        Fit Note Prototype Versions</h1>
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
 
-        <h2 class="govuk-heading-m">Please find the Fit Note prototype versions currently under test and refinement</h2>
+      <p>You’ll be told during your application for <a href="https://www.gov.uk/employment-support-allowance">Employment and Support Allowance (ESA)</a> or ‘new style’ ESA, when you need to send fit notes (sometimes called ‘sick notes’ or a ‘statement of fitness for work’).</p>
 
-      <p> The Baseline Prototypes are developed leveraging the questions from <b><a href="https://www.gov.uk/send-fit-note">Send your fit note for your ESA claim</a></b> from the current live Beta.</p>
+<p>You'll need:</p>
 
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your fit note signed by your doctor</li>
+        <li>your National Insurance number</li>
+        <li>a phone or tablet with a camera, or a computer with a saved photo or copy of your fit note</li>
+      </ul>
 
-      <p> For any questions, please contact <a href="mailto:david.doherty@engineering.digital.dwp.gov.uk">David Doherty</a>.
-      </p>
+      <p>You do not need to send a fit note if you cannot work while you are self-isolating because of coronavirus (COVID-19).</p>
 
-      <h2 class="govuk-heading-s">Fit Note Baseline Prototypes</h2>
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      <b>v1 Prototypes</b>
-    </span>
-        </summary>
-        <div class="govuk-details__text">
-          <form class="form" action="/start-prototype-v1" method="post">
-            <p> The Baseline v1 Prototypes are designed using <b>the questions and processes from the Beta.</b></p>
-              <div class="govuk-!-padding-bottom-4"></div>
-              <p class="govuk-body"><b>Prototype v1 versions</b>:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><b>v1a</b> - follows the <b>"Desktop and laptop"</b> radio button</li>
-                <li><b>v1b</b> - follows the <b>"Phone and tablet"</b> radio button</li></ul>
-                <div class="govuk-!-padding-bottom-7"></div>
-                <button class="govuk-button" data-module="govuk-button">Baseline Prototype v1a</button></form>
-          <form class="form" action="/start-prototype-v1-phone" method="post">
-            <button class="govuk-button" data-module="govuk-button">Baseline Prototype v1b</button></form>
-        </div>
-      </details>
-
-
-
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      <b>v2 Prototypes</b>
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <form class="form" action="/start-prototype-v2" method="post">
-      <p> The Baseline v2 Prototypes v2 are designed using a newly introduced GDS component, the <b>step-by-step navigation bar</b> to periodically help claimants. <b>This navigation bar is positioned in the first two-thirds of the form</b>.</p>
-        <div class="govuk-!-padding-bottom-4"></div>
-        <p class="govuk-body"><b>Prototype v2 versions</b>:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><b>v2a</b> - contains no images</li>
-          <li><b>v2b</b> - contains images from Beta</li>
-          <li><b>v2c</b> - contains Project Falcon customised images</li>
-          <li><b>v2d</b> - integrates a <b>Details</b> GDS component to make the step-by-step navigation bar more discrete. Contains <b>check your answers</b> functionality</li></ul>
-
-          <div class="govuk-!-padding-bottom-4"></div>
-          <b>Please note:</b> to aid quick and agile prototyping <b>v2b</b> and <b>v2c</b> are just programmed to <b>only</b> show the <b>Save and upload your fit note screen</b>.
-          <div class="govuk-!-padding-bottom-7"></div>
-
-          <button class="govuk-button" data-module="govuk-button">Baseline Prototype v2a</button></form>
-    <form class="form" action="/two-thirds-step-by-step-navigation-beta-images" method="post">
-      <button class="govuk-button" data-module="govuk-button">Baseline Prototype v2b</button></form>
-    <form class="form" action="/two-thirds-step-by-step-navigation-new-images" method="post">
-      <button class="govuk-button" data-module="govuk-button">Baseline Prototype v2c</button></form>
-    <form class="form" action="/start-prototype-v2-help" method="post">
-      <button class="govuk-button" data-module="govuk-button">Baseline Prototype v2d</button></form>
-  </div>
-</details>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      <b>v3 Prototypes</b>
-    </span>
-      </summary>
-      <div class="govuk-details__text">
-        <form class="form" action="/start-prototype-v3" method="post">
-          <p>The Baseline v3 Prototypes are designed using the <b>same step-by-step navigation bar as Prototype v2</b>, but the bar is positioned in the <b>right-hand-side column</b>.</p>
-            <div class="govuk-!-padding-bottom-4"></div>
-            <p class="govuk-body"><b>Prototype v3 versions</b>:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><b>v3a</b> - contains no images</li>
-              <li><b>v3b</b> - contains images from Beta</li>
-              <li><b>v3c</b> - contains Project Falcon customised images</li>
-              <li><b>v3d</b> - integrates a <b>Details</b> GDS component to make the step-by-step navigation bar more discrete. Contains <b>check your answers</b> functionality</li>
-              <div class="govuk-!-padding-bottom-4"></div>
-              <b>Please note:</b> to aid quick and agile prototyping <b>v3b</b> and <b>v3c</b> are just programmed to <b>only</b> show the <b>Save and upload your fit note screen</b>.</ul>
-              <div class="govuk-!-padding-bottom-7"></div>
-
-              <button class="govuk-button" data-module="govuk-button">Baseline Prototype v3a</button></form>
-        <form class="form" action="/one-third-step-by-step-navigation-beta-images" method="post">
-          <button class="govuk-button" data-module="govuk-button">Baseline Prototype v3b</button></form>
-        <form class="form" action="/one-third-step-by-step-navigation-new-images" method="post">
-          <button class="govuk-button" data-module="govuk-button">Baseline Prototype v3c</button></form>
-        <form class="form" action="/start-prototype-v3-help" method="post">
-          <button class="govuk-button" data-module="govuk-button">Baseline Prototype v3d</button></form>
-        </ul>
+      <div class="govuk-inset-text">
+  This service is also available in <a href="https://www.gov.uk/anfon-eich-nodyn-ffitrwydd-ar-gyfer-eich-cais-esa">Welsh (Cymraeg)</a>.
       </div>
-    </details>
 
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
+
+        <a href="/v5a-upload" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+      <h2 class="govuk-heading-m">Other ways to apply</h2>
+
+      <p>You can post your fit note. If you need to send any other medical evidence, you must post it.</p>
+
+      <p>Send your fit note or other medical evidence to:</p>
+
+      <div class="govuk-inset-text">
+  Freepost DWP ESA 26
+</div>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      <b>v4 Prototype</b>
+      Posting a fit note
     </span>
-        </summary>
-        <div class="govuk-details__text">
-          <form class="form" action="/v4-start-prototype" method="post">
-            <p><b>Prototype v4</b> is designed with a series of 'nice to have' new pages for User Testing in the future, specifically with an emphasis on enabling GPs and Job Centre staff. It was decided by Team Falcon to focus on these 'nice to haves' later-on in the project. Therefore for UI Testing please refer to v5</b>.</p>
-              <div class="govuk-!-padding-bottom-4"></div>
-              <p class="govuk-body"><b>Prototype v4:</b> incorporates new features such as:</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>An image of a Fit Note on the Start Page</li>
-                    <li>The addition of a <b>Warning</b> component that states: <i>This service does not accept or process med 10s, isolation notes or letters from medical professionals</i>.</li>
-                    <li>The a <b>Details</b> component with aids the user with additional information for Med 10s, isolation notes and letters from medical professionals.</li>
-                    <li>The addition of a <b>Details</b> component with an image of an envelope to aid users with Freepost.</li>
-                    <li>The addition of a <i>Do you have a fit note?</i> question and image to ensure that the user is using the right service</li>
-                    <li>The addition of a <b>Inset text</b> component stating: <i>Please ensure that your file upload format is either PDF, JPEG or PNG. Do not upload a screenshot. Recommended file size is between 500KB and 10MB</i>.</li>
-                    <li>The addition of a <b>Details</b> component stating: <i>What is my National Insurance number?</i></li>
-                    <li>The addition of a page stating: <i>How did you get your fit note? Have you discussed a rehabilitation plan to get back to work?</i>.</li>
-                    <li>The addition of a page stating: <i>Have you discussed temporary alternative roles with your employer?</i></li>
-                    <li>The addition of a page with a Submit your fit note checkbox.</li>
-                    </li></ul>
-                    </p>
+            </summary>
+            <div class="govuk-details__text">
+                Fit notes can be posted directly to ESA using the address <b>Freepost DWP ESA 26</b>. You do not need a postage stamp.
+                <div class="govuk-!-padding-bottom-4"></div>
+                <!DOCTYPE html>
+                <style>
+                              .freepost-letter {max-width: 40%}
+                              .freepost-letter {max-height: auto}
+                          </style>
+                <img src="/public/images/freepost-letter.png" class="freepost-letter" alt="image of envelope with address">
+                </html>
+            </div>
+        </details>
 
-                  <div class="govuk-!-padding-bottom-7"></div>
+    </div>
 
-                  <button class="govuk-button" data-module="govuk-button">Prototype v4</button></form>
-          <form class="form" action="v4-start-prototype" method="post">
-            </form>
+    <div class="govuk-grid-column-one-third">
 
-      </details>
-
-      <h2 class="govuk-heading-s">Fit Note Prototypes for A/B Testing</h2>
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      <b>v5 Prototypes</b>
-    </span>
-        </summary>
-        <div class="govuk-details__text">
-          <form class="form" action="/v5a-start-prototype" method="post">
-            <p><b>Prototypes v5</b> are designed for A/B UI testing on 19th and 20th November 2020.</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><b>v5a</b> - a GDS-refreshed version of Beta to be used as the Control during A/B Testing.</li>
-              <li><b>v5b</b> - Incorporates several new features from <b>Prototype v4</b> (but not all). The overal aim is to test if the user knows what a fit note is visually and if they know how to upload their fit note correctly (with an emphasis on PDF via mobile and, <i>not</i> as a screenshot).</li>
-              </li></ul>
+        <div class="govuk-inset-text">
+            <h2 class="govuk-heading-m">Talk to an advisor</h2>
+            <ul class="govuk-list">
+                <li>Telephone: 0800 169 0310</li>
+                <li>Textphone: 0800 169 0314</li>
+                <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+            </ul>
+            <p class="govuk-body">
+                <a class="govuk-link" href="#">Find out about call charges</a>
             </p>
 
-            <div class="govuk-!-padding-bottom-7"></div>
+        </div>
 
-            <button class="govuk-button" data-module="govuk-button">Prototype v5a</button></form>
-          <form class="form" action="v5a-start-prototype" method="post">
-          </form>
-
-          <form class="form" action="/v5b-start-prototype" method="post">
-          <button class="govuk-button" data-module="govuk-button">Prototype v5b</button></form>
-          <form class="form" action="v5b-start-prototype" method="post">
-          </form>
-
-      </details>
-
-      <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-              The above prototypes are not for production!
-            </strong>
-          </div>
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related content
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/employment-support-allowance">
+                Employment and Support Allowance (ESA)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/guidance/get-help-with-benefits-and-pensions-if-you-have-accessibility-needs">
+                Get help with benefits and pensions if you have accessibility needs
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/browse/benefits/disability">
+                Carers and disability benefits
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
     </div>
   </div>
-</div>
-</div>
-</form>
-</div>
-
 {% endblock %}
