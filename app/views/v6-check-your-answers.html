@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v4-text-message">Back</a>
+  <a class="govuk-back-link" href="v6-text-message">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@
             {{ data['national-insurance-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="v4-ni-number">
+            <a href="v6-ni-number">
               Change
               <span class="govuk-visually-hidden"> National Insurance number</span>
             </a>
@@ -41,51 +41,9 @@
             <br>{{ data['address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="v4-address">
+            <a href="v6-address">
               Change
               <span class="govuk-visually-hidden"> Your address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How did you get your fit note?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['fit-note-request'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="v4-gp">
-              Change
-              <span class="govuk-visually-hidden"> How did you get your fit note</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Have you discussed a rehabilitation plan to get back to work?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['back-to-work'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="v4-gp">
-              Change
-              <span class="govuk-visually-hidden"> Have you discussed a rehabilitation plan to get back to work</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Have you discussed temporary alternative roles with your employer?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['alternative-role'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="v4-employer">
-              Change
-              <span class="govuk-visually-hidden"> Have you discussed temporary alternative roles with your employer?</span>
             </a>
           </dd>
         </div>
@@ -94,10 +52,10 @@
             Confirmation text message
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['contact'] }}
+            {{ data['contact-by-phone'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="v4-text-message">
+            <a href="v6-text-message">
               Change
               <span class="govuk-visually-hidden"> Confirmation text message</span>
             </a>
@@ -105,7 +63,7 @@
         </div>
       </dl>
 
-      <form action="/v4-understanding" method="post" novalidate>
+      <form action="/v6-confirmation" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
