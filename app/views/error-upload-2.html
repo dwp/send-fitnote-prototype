@@ -14,10 +14,23 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v6-additional-do-you-have-a-fit-note">Back</a>
+  <a class="govuk-back-link" href="v5a-start-prototype">Back</a>
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There's a problem with the photo or scan of your fit note
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#">We are unable to read that image, please try again</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -39,13 +52,6 @@
     </ol>
     <div class="govuk-!-padding-bottom-2"></div>
     <p><b>Your photo or scan will be automatically checked to make sure it's good enough.</b></p>
-
-    <div class="govuk-inset-text">
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Please ensure that your file upload format is either PDF, JPEG or PNG.</li>
-        <li>The recommended file size is between 500KB and 10MB.</li>
-        <li> Please avoid uploading a screenshot of your fit note.</li></ul>
-    </div>
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
@@ -75,12 +81,7 @@
             </div>
 
             <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-hold-the-device-directly-above-the-fit-note-1">
-
-              <ul class="govuk-list govuk-list--bullet">
-                <li>it is best to hold the device about 20cm / 1 foot above the fit note</li>
-                <li>avoid taking the photo at an angle</li>
-                <li>hold the device directly above the fit note</li></ul>
-
+              <p class="app-step-nav__paragraph">It is best hold the device about a foot above the fit note and avoid taking the photo at an angle</p>
               <style>
             .both-scans {max-width: 100%}
             .both-scans {max-height: auto}
@@ -116,7 +117,7 @@
                   <ul class="govuk-list govuk-list--bullet">
                     <li>your fit note is well lit</li>
                     <li>the device screen is bright enough to see the image of your fit note clearly</li>
-                    <li>nothing is between your fit note and the light to avoid any shadows</li>
+                    <li>nothing is between your fit note and the light that casts a strong shadow</li>
                   </ul>
               </ol>
               <style>
@@ -145,8 +146,8 @@
               </span>
               </h2>
             </div>
+
             <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-Make-sure-your-fit-note-is-sideways-or-landscape-2">
-              <div class="govuk-text"><p>Ensure that your image includes your whole fit note by holding your device sideways or 'landscape'.</p></div>
               <ol class="app-step-nav__list " data-length="1">
                 <li class="app-step-nav__list-item js-list-item "></li>
                 <style>
@@ -177,13 +178,13 @@
               </span>
 
                 <span class="js-step-title">
-                Make sure the whole fit note is in the photo
+                Make sure the whole thing is in the photo
               </span>
               </h2>
             </div>
 
             <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
-              <p class="app-step-nav__paragraph">Ensure that your image includes your whole fit note. It should fill the photo and all 4 corners should be inside it.</p>
+              <p class="app-step-nav__paragraph">The fit note should fill as much of the photo as possible but all 4 corners should be inside it.</p>
               <style>
             .both-zoom {max-width: 100%}
             .both-zoom {max-height: auto}
@@ -228,7 +229,7 @@
     <h1 class="govuk-heading-l">Choose a file to upload</h1>
     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     <div class="govuk-!-padding-bottom-6"></div>
-    <form class="form" action="/v6-scanning-photo" method="post">
+    <form class="form" action="/v5a-scanning-photo" method="post">
       <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>

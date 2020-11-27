@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="index" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How did you obtain you fit note?
+              </h1>
+            </legend>
+            <div id="do-you-have-a-fit-note-hint" class="govuk-hint">
+              To make sure your fit note is uploaded correctly, please select an option.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  I have a paper copy of my fit note
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  My GP sent me a SMS link with my fit note
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  My GP sent me an email with my fit note attached
+                </label>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+        </ul>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">Find out about call charges</a>
+        </p>
+
+      </div>
+
+  </div>
+
+  </main>   
+
+{% endblock %}
