@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v6-address">Back</a>
+  <a class="govuk-back-link" href="dev-address">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -22,25 +22,24 @@
               Would you like a text message to confirm that your fit note has been received?
             </h1>
           </legend>
-          <p>It can take up to 24 hours for you to receive confirmation text.</p>
-          <div class="govuk-!-padding-bottom-1"></div>
+          <div class="govuk-!-padding-bottom-3"></div>
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Yes" data-aria-controls="conditional-contact">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
               <label class="govuk-label govuk-radios__label" for="contact">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
               <div class="govuk-form-group">
-                <label class="govuk-label" for="contact">
+                <label class="govuk-label" for="contact-by-email">
                   Your mobile number
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="text" spellcheck="false" value"{{ data['contact-by-phone'] }}"></div>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
 
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="No" data-aria-controls="conditional-contact-2">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
               <label class="govuk-label govuk-radios__label" for="contact-2">
                 No
               </label>
@@ -49,7 +48,7 @@
           </div>
 
           <div class="govuk-!-padding-bottom-6"></div>
-          <form class="form" action="/v6-check-your-answers" method="post">
+          <form class="form" action="/dev-check-your-answers" method="post">
             <button class="govuk-button" data-module="govuk-button">Continue</button>
 
         </fieldset>
@@ -60,16 +59,12 @@
     <div class="govuk-grid-column-one-third">
 
       <div class="govuk-inset-text">
-        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <h2 class="govuk-heading-m">Get help</h2>
         <ul class="govuk-list">
           <li>Telephone: 0800 169 0310</li>
           <li>Textphone: 0800 169 0314</li>
           <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
         </ul>
-        <p class="govuk-body">
-          <a class="govuk-link" href="#">Find out about call charges</a>
-        </p>
-
       </div>
 
   </div>
