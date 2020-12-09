@@ -23,8 +23,15 @@
   <h2 class="govuk-error-summary__title" id="error-summary-title">
     There is a problem
   </h2>
-  <p>Your file is too big</p>
-  <p>The file size should be between 500KB and 10MB</p>
+  <p>There is a problem with the photo or scan of your fit note</p>
+  <p><b>You can either:</b></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>try again with this device</li>
+    <li>try again with another device - you can ask a family member or friend to use theirs</li>
+    <li><a href="#">get more help to get your photo right</a></li>
+  </ul>
+
+  <p><a href="#">Get help with this error</a></p>
 
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
@@ -229,16 +236,12 @@
       </div>
     </details>
 
-    <div class="govuk-form-group govuk-form-group--error">
-      <h1 class="govuk-heading-l">Choose a file to upload</h1>
-      <span id="nationality-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span>Upload another photo or scan
-    </span>
-      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-    </div>
+    <h1 class="govuk-heading-l">Choose a file to upload</h1>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     <div class="govuk-!-padding-bottom-6"></div>
     <form class="form" action="/v5a-scanning-photo" method="post">
       <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
   </div>
 
   <div class="govuk-grid-row">
