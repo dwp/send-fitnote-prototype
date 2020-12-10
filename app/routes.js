@@ -7,13 +7,13 @@ router.route('/v7a-three-options-select')
     let redirectUrl
     switch (req.body['obtained-fit-note']) {
       case 'paper':
-        redirectUrl = 'v7a-fitnote-version-1-paper'
+        redirectUrl = 'v7a-upload-paper'
         break
       case 'sms':
-        redirectUrl = 'v7a-fitnote-version-2-sms'
+        redirectUrl = 'v7a-upload-sms'
         break
       case 'email':
-        redirectUrl = 'v7a-fitnote-version-3-email'
+        redirectUrl = 'v7a-upload-email'
         break
       default:
         redirectUrl = req.path

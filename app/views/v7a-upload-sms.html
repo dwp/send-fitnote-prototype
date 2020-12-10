@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v7a-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Save and upload your fit note</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your SMS sent to you by your GP practice containing your fit note</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Click on the link within your SMS from your GP practice</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download your fit note onto your device
+        <ul class="govuk-list govuk-list--bullet">
+          <li>this may be saved in your <b>Downloads Folder</b></li>
+          <li>for more information of how to download your fit note, please look at your device manual</li>
+          <li>please avoid taking a screenshot</li>
+        </ul></li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Click on <b>Choose File</b> below to upload your fit note
+        <ul class="govuk-list govuk-list--bullet">
+          <li>this may be saved in your <b>Downloads Folder</b></li>
+        </ul></li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+    <p><b>Your photo or scan will be automatically checked to make sure it's good enough.</b></p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Please ensure that your file upload format is either PDF, JPEG or PNG.</li>
+        <li>The recommended file size is between 500KB and 10MB.</li>
+        <li> Please avoid uploading a screenshot of your fit note.</li></ul>
+    </div>
+
+
+
+    <h1 class="govuk-heading-l">Choose a file to upload</h1>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <form class="form" action="/v7a-scanning-photo-sms" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+      </ul>
+      <p class="govuk-body">
+        <a class="govuk-link" href="#">Find out about call charges</a></p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
