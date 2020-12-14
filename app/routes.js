@@ -22,4 +22,22 @@ router.route('/v7a-three-options-select')
     res.redirect(redirectUrl)
   })
 
+router.route('/v7a-additional-do-you-have-a-fit-note')
+  .post((req, res, next) => {
+    let redirectUrl
+    console.table(req.body)
+    switch (req.body['do-you-have-a-fit-note-v7a']) {
+      case 'yes':
+        redirectUrl = 'v7a-three-options'
+        break
+      case 'no':
+        redirectUrl = 'v7a-no-fit-note'
+        break
+      default:
+        redirectUrl = req.path
+        break
+    }
+    res.redirect(redirectUrl)
+  })
+
 module.exports = router
