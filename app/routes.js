@@ -25,7 +25,7 @@ router.route('/v7a-three-options-select')
 router.route('/v7a-additional-do-you-have-a-fit-note')
   .post((req, res, next) => {
     let redirectUrl
-    console.table(req.body)
+    // console.table(req.body)
     switch (req.body['do-you-have-a-fit-note-v7a']) {
       case 'yes':
         redirectUrl = 'v7a-three-options'
