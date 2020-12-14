@@ -40,4 +40,22 @@ router.route('/v7a-additional-do-you-have-a-fit-note')
     res.redirect(redirectUrl)
   })
 
+router.route('/v7b-additional-do-you-have-a-fit-note')
+   .post((req, res, next) => {
+     let redirectUrl
+     // console.table(req.body)
+     switch (req.body['do-you-have-a-fit-note-v7b']) {
+       case 'yes':
+         redirectUrl = 'v7b-upload-accordion'
+         break
+       case 'no':
+         redirectUrl = 'v7b-no-fit-note'
+         break
+       default:
+         redirectUrl = req.path
+         break
+     }
+     res.redirect(redirectUrl)
+   })
+
 module.exports = router
