@@ -14,31 +14,31 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/v7a-additional-do-you-have-a-fit-note" method="post">
       <div class="govuk-form-group">
         <div class="govuk-form-group">
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="do-you-have-a-fit-note-hint">
+            <fieldset class="govuk-fieldset" aria-describedby="do-you-have-a-fit-note-v7a-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
                   Do you have a fit note?
                 </h1>
               </legend>
               <div id="contact-hint" class="govuk-hint">
-                Does your document look like the below image
+                Does your document look like the below example?
               </div>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="do-you-have-a-fit-note" name="do-you-have-a-fit-note" type="radio" value="yes" data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-radios__label" for="do-you-have-a-fit-note">
+                  <input class="govuk-radios__input" id="do-you-have-a-fit-note-v7a" name="do-you-have-a-fit-note-v7a" type="radio" value="yes" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="do-you-have-a-fit-note-v7a">
                     Yes
                   </label>
                 </div>
 
-
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="do-you-have-a-fit-note-2" name="do-you-have-a-fit-note" type="radio" value="no" data-aria-controls="conditional-contact-2">
-                  <label class="govuk-label govuk-radios__label" for="do-you-have-a-fit-note-2">
+                  <input class="govuk-radios__input" id="do-you-have-a-fit-note-v7a-2" name="do-you-have-a-fit-note-v7a" type="radio" value="no" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="do-you-have-a-fit-note-v7a-2">
                     No
                   </label>
                 </div>
@@ -53,21 +53,20 @@
 
           <div class="govuk-!-padding-bottom-1"></div>
 
-          <!DOCTYPE html>
           <style>
-                              .example-fit-note {max-width: 100%}
-                              .example-fit-note {max-height: auto}
-        </style>
+              .example-fit-note {max-width: 100%}
+              .example-fit-note {max-height: auto}
+          </style>
           <center>
-          <img src="/public/images/example-fit-note.png" class="example-fit-note" alt="image of an example fit note">
+            <img src="/public/images/example-fit-note.png" class="example-fit-note" alt="image of an example fit note">
           </center>
-          </html>
 
-          <form class="form" action="/v7a-three-options" method="post">
+          
           <div class="govuk-!-padding-bottom-6"></div>
           <button class="govuk-button" data-module="govuk-button">Continue</button>
-          </form>
+          
         </fieldset>
+        </form>
       </div>
 
     </div>
