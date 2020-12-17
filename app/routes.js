@@ -58,4 +58,22 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
      res.redirect(redirectUrl)
    })
 
+   router.route('/dev-do-you-have-a-fit-note')
+      .post((req, res, next) => {
+        let redirectUrl
+        // console.table(req.body)
+        switch (req.body['dev-do-you-have-a-fit-note']) {
+          case 'yes':
+            redirectUrl = 'dev-upload'
+            break
+          case 'no':
+            redirectUrl = 'dev-no-fit-note'
+            break
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
+
 module.exports = router
