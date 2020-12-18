@@ -64,7 +64,7 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
         // console.table(req.body)
         switch (req.body['dev-do-you-have-a-fit-note']) {
           case 'yes':
-            redirectUrl = 'dev-upload'
+            redirectUrl = 'dev-three-options'
             break
           case 'no':
             redirectUrl = 'dev-no-fit-note'
@@ -75,5 +75,25 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
         }
         res.redirect(redirectUrl)
       })
+
+      router.route('/dev-three-options-select')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['dev-obtained-fit-note']) {
+            case 'paper':
+              redirectUrl = 'dev-upload-paper'
+              break
+            case 'sms':
+              redirectUrl = 'dev-upload-sms'
+              break
+            case 'email':
+              redirectUrl = 'dev-upload-email'
+              break
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
 
 module.exports = router
