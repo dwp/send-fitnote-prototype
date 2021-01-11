@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Error
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+      <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Mae rhywbeth wedi mynd o'i le</h1>
+            <p class="govuk-body">Ni ellir dod o hyd i'r dudalen hon. Gwiriwch y ddolen rydych yn ei ddefnyddio a rhowch gynnig arall.</p>
+            <p class="govuk-body">
+              Ewch i'r <a class="govuk-link" href="dev-start">hafan</a>.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
+        <ul class="govuk-list">
+          <li>Ffôn: 0800 169 0310</li>
+          <li>Ffôn testun: 0800 169 0314</li>
+          <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+        </ul>
+      </div>
+
+  </div>
+
+{% endblock %}
