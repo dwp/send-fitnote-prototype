@@ -96,4 +96,43 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
           res.redirect(redirectUrl)
         })
 
+           router.route('/welsh-dev-do-you-have-a-fit-note')
+              .post((req, res, next) => {
+                let redirectUrl
+                // console.table(req.body)
+                switch (req.body['welsh-dev-do-you-have-a-fit-note']) {
+                  case 'ydy':
+                    redirectUrl = 'welsh-dev-three-options'
+                    break
+                  case 'na':
+                    redirectUrl = 'welsh-dev-no-fit-note'
+                    break
+                  default:
+                    redirectUrl = req.path
+                    break
+                }
+                res.redirect(redirectUrl)
+              })
+
+
+                    router.route('/welsh-dev-three-options-select')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['welsh-dev-obtained-fit-note']) {
+                          case 'paper':
+                            redirectUrl = 'welsh-dev-upload-paper'
+                            break
+                          case 'sms':
+                            redirectUrl = 'welsh-dev-upload-sms'
+                            break
+                          case 'email':
+                            redirectUrl = 'welsh-dev-upload-email'
+                            break
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
 module.exports = router

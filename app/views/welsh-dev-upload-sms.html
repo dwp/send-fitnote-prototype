@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="welsh-dev-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Uwchlwytho eich nodyn ffitrwydd</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Agorwch y neges testun a anfonwyd atoch gan eich meddyg neu feddygfa sy’n cynnwys eich nodyn ffitrwydd.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Cliciwch ar y dolen sydd yn eich neges testun gan eich meddyg neu feddygfa.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Lawrlwythwch eich nodyn ffitrwydd i’ch dyfais.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>o	i gael rhagor o wybodaeth sut i lawrlwytho eich dogfen, edrychwch ar lawlyfr eich dyfais</li>
+        </ul></li>
+      <li>Uwchlwytho eich nodyn ffitrwydd.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>o	efallai bod eich nodyn ffitrwydd wedi cael ei arbed ar eich dyfais mewn ffolder  <b>'Downloads'</b>, <b>'Recents'</b> neu <b>'Saved As'</b></li>
+        </ul></li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+    <p><b>Bydd eich ffeil yn cael ei wirio’n awtomatig i wneud yn siwr ei fod yn ddigon da.</b></p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>dylech sicrhau bod ffurf y ffeil rydych yn ei lwytho yn naill ai JPG, BMP, PNG, TIF neu PDF</li>
+        <li>mae’n rhaid i’r ffeil dewisedig fod yn llai na 10MB</li>
+        <li><b>peidiwch â llwytho ‘screenshot’ </b> o’ch nodyn ffitrwydd gan na fydd yn gweithio.</li></ul>
+    </div>
+
+    <h1 class="govuk-heading-l">Dewiswch ffeil i uwchlwytho</h1>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <form class="form" action="/welsh-dev-scanning-photo-sms" method="post">
+      <button class="govuk-button" data-module="govuk-button">Parhau</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
+      <ul class="govuk-list">
+        <li>Ffôn: 0800 169 0310</li>
+        <li>Ffôn testun: 0800 169 0314</li>
+        <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

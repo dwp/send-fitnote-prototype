@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="welsh-dev-text-message-email">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Gwirio eich manylion cyn anfon eich nodyn ffitrwydd</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Rhif Yswiriant Gwladol
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="welsh-dev-ni-number-email">
+              Change
+              <span class="govuk-visually-hidden">Newid rhif Yswiriant Gwladol</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Eich cyfeiriad
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}
+            <br>{{ data['address-line-2'] }}
+            <br>{{ data['address-town'] }}
+            <br>{{ data['address-county'] }}
+            <br>{{ data['address-postcode'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="welsh-dev-address-email">
+              Change
+              <span class="govuk-visually-hidden">Newid eich cyfeiriad</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Neges testun o gadarnhad
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contact-by-phone'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="welsh-dev-text-message-email">
+              Change
+              <span class="govuk-visually-hidden">Newid eich rhif ffôn </span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="/welsh-dev-confirmation-email" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Anfon nodyn ffitrwydd
+        </button>
+
+      </form>
+
+    </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
+      <ul class="govuk-list">
+        <li>Ffôn: 0800 169 0310</li>
+        <li>Ffôn testun: 0800 169 0314</li>
+        <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  </div>
+
+
+{% endblock %}

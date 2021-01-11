@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="welsh-dev-do-you-have-a-fit-note">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/welsh-dev-three-options-select" method="POST">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Sut gawsoch eich nodyn ffitrwydd?
+              </h1>
+            </legend>
+            <div id="welsh-dev-three-options-select-hint" class="govuk-hint">
+              I sicrhau bod eich nodyn ffitrwydd wedi uwchlwytho’n gywir, dewiswch opsiwn.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note" name="welsh-dev-obtained-fit-note" type="radio" value="paper">
+                <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note">
+                  Mae gennyf gopi papur o fy nodyn ffitrwydd
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note-2" name="welsh-dev-obtained-fit-note" type="radio" value="sms">
+                <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note-2">
+                  Mae fy meddyg wedi anfon neges testun i mi gyda dolen i fy nodyn ffitrwydd
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note-3" name="welsh-dev-obtained-fit-note" type="radio" value="email">
+                <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note-3">
+                  Mae fy meddyg wedi anfon e-bost i mi gyda dolen i fy nodyn ffitrwydd
+                </label>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Parhau</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
+        <ul class="govuk-list">
+          <li>Ffôn: 0800 169 0310</li>
+          <li>Ffôn testun: 0800 169 0314</li>
+          <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+        </ul>
+      </div>
+
+  </div>
+
+  </main>   
+
+{% endblock %}
