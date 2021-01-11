@@ -25,8 +25,16 @@
         <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint" value="{{ data['national-insurance-number'] }}">
       </div>
 
-        <a class="govuk-link" href="https://www.gov.uk/lost-national-insurance-number">Beth yw fy rhif Yswiriant Gwladol?</a>
-
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Beth yw fy rhif Yswiriant Gwladol?
+    </span>
+          </summary>
+          <div class="govuk-details__text">
+            If you are unable to locate your National Insurance number, please refer to <a class="govuk-link" href="https://www.gov.uk/lost-national-insurance-number">find your National Insurance number</a>
+          </div>
+        </details>
 
         <div class="govuk-!-padding-bottom-6"></div>
         <button class="govuk-button" data-module="govuk-button">Parhau</button>
