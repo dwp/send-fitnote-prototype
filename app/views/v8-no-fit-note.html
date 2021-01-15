@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v8-do-you-have-a-fit-note">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Only a fit note can be uploaded and processed by this service</h1>
+
+    <p class="govuk-body">
+      If you do not have a fit note and do require one, please get in touch with your doctor or GP practice. The following are examples of a medical letter, isolation note and MED 10, <b>they are not fit notes and cannot be uploaded onto this service</b>.</p>
+
+      <!DOCTYPE html>
+      <style>
+
+            .not-accepted {max-width: 100%}
+            .not-accepted {max-height: auto}
+    </style>
+      <img src="/public/images/not-accepted.png" class="not-accepted" alt="Examples of a medical letter, isolation note and a MED 10 form">
+      </html>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+    <p>However you can post alternative medical evidence, such as a medical letter, isolation note or MED 10 to <b>Freepost DWP ESA 16</b>. Please ensure that you have a copy or duplicate of your medical evidence before sending it.</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How to post medical evidence
+    </span>
+      </summary>
+      <div class="govuk-details__text">
+        Medical evidence can be posted directly to ESA using the address <b>Freepost DWP ESA 26</b>. You do not need a postage stamp.
+        <div class="govuk-!-padding-bottom-4"></div>
+        <!DOCTYPE html>
+        <style>
+                              .freepost-letter {max-width: 40%}
+                              .freepost-letter {max-height: auto}
+                          </style>
+        <img src="/public/images/freepost-letter.png" class="freepost-letter" alt="Postal envelope with the postal address">
+        </html>
+      </div>
+    </details>
+
+
+    <form class="form" action="/v8-start" method="post">
+      <button class="govuk-button" data-module="govuk-button">Return to start page</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
+</div>
