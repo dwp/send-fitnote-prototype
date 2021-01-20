@@ -14,18 +14,17 @@
 
       <h1 class="govuk-heading-l">Check your details before sending your fit note</h1>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9"">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            National Insurance number
+             National Insurance number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['national-insurance-number'] }}
+             {{ data['national-insurance-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="v8-ni-number-email">
-              Change
-              <span class="govuk-visually-hidden"> National Insurance number</span>
+            <a class="govuk-link" href="v8-ni-number-email">
+              Change<span class="govuk-visually-hidden"> National Insurance number</span>
             </a>
           </dd>
         </div>
@@ -34,16 +33,11 @@
             Your address
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}
-            <br>{{ data['address-line-2'] }}
-            <br>{{ data['address-town'] }}
-            <br>{{ data['address-county'] }}
-            <br>{{ data['address-postcode'] }}
+            {{ data['address-county'] }} <br> {{ data['address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="v8-address-email">
-              Change
-              <span class="govuk-visually-hidden"> Your address</span>
+            <a class="govuk-link" href="v8-address-email">
+              Change<span class="govuk-visually-hidden"> Your address</span>
             </a>
           </dd>
         </div>
@@ -55,9 +49,8 @@
             {{ data['contact-by-phone'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="v8-text-message-email">
-              Change
-              <span class="govuk-visually-hidden"> Confirmation text message</span>
+            <a class="govuk-link" href="v8-text-message-email">
+              Change<span class="govuk-visually-hidden"> Confirmation text message</span>
             </a>
           </dd>
         </div>
