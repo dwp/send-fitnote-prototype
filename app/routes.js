@@ -175,5 +175,43 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                 res.redirect(redirectUrl)
               })
 
+                 router.route('/v9-do-you-have-a-fit-note')
+                    .post((req, res, next) => {
+                      let redirectUrl
+                      // console.table(req.body)
+                      switch (req.body['v9-do-you-have-a-fit-note']) {
+                        case 'yes':
+                          redirectUrl = 'v9-three-options'
+                          break
+                        case 'no':
+                          redirectUrl = 'v9-no-fit-note'
+                          break
+                        default:
+                          redirectUrl = req.path
+                          break
+                      }
+                      res.redirect(redirectUrl)
+                    })
+
+                    router.route('/v9-three-options-select')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['v9-obtained-fit-note']) {
+                          case 'paper':
+                            redirectUrl = 'v9-upload-paper'
+                            break
+                          case 'sms':
+                            redirectUrl = 'v9-upload-sms'
+                            break
+                          case 'email':
+                            redirectUrl = 'v9-upload-email'
+                            break
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
 
 module.exports = router

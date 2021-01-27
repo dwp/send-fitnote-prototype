@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="dev-three-options">Back</a>
+  <a class="govuk-back-link" href="v9-three-options">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -25,26 +25,21 @@
 
     <div class="govuk-!-padding-bottom-2"></div>
 
-<p     <!DOCTYPE html><style>
-      .open-email {max-width: 10%}
-      .open-email {max-height: auto}
-      </style>
-    <img src="/public/images/open-email.png" class="open-email" alt="User icon"></html>Open your email sent to you by your doctor or GP practice containing your fit note.</p>
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your SMS sent to you by your doctor or GP practice containing your fit note.</li>
       <div class="govuk-!-padding-bottom-3"></div>
-
-      <p <!DOCTYPE html><style>
-      .download {max-width: 10%}
-      .download {max-height: auto}
-      </style>
-      <img src="/public/images/download.png" class="download" alt="User icon"></html>Download the fit note which was attached from your doctor or GP practice's email.</p>
-
-      <p <!DOCTYPE html><style>
-      .upload {max-width: 10%}
-      .upload {max-height: auto}
-      </style>
-      <img src="/public/images/upload.png" class="upload" alt="User icon"></html>Upload your fit note.
-          <p>your fit note may be saved in your device's <b>Downloads</b>, <b>Recents</b> or <b>Saved As</b> folder</p>
-
+      <li>Click on the link within your SMS from your doctor or GP practice.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download your fit note onto your device.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>for more information of how to download your fit note, please look at your device manual</li>
+        </ul></li>
+      <li>Upload your fit note.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your fit note may be saved in your device's <b>Downloads</b>, <b>Recents</b> or <b>Saved As</b> folder</li>
+        </ul></li>
+    </ol>
 
     <div class="govuk-!-padding-bottom-2"></div>
     <p><b>Your file will automatically be checked to make sure the quality is good enough.</b></p>
@@ -61,7 +56,7 @@
     <h1 class="govuk-heading-l">Choose a file to upload</h1>
     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     <div class="govuk-!-padding-bottom-6"></div>
-    <form class="form" action="/dev-scanning-photo-email" method="post">
+    <form class="form" action="/v9-scanning-photo-sms" method="post">
       <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>
