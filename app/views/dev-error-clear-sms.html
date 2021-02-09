@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="dev-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#dev-error-clear-sms">The selected file must be clear and readable, containing the whole fit note</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Upload your fit note</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your SMS sent to you by your doctor or GP practice containing your fit note.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Click on the link within your SMS from your doctor or GP practice.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download your fit note onto your device.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>for more information of how to download your fit note, please look at your device manual</li>
+        </ul></li>
+      <li>Upload your fit note.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your fit note may be saved in your device's <b>Downloads</b>, <b>Recents</b> or <b>Saved As</b> folder</li>
+        </ul></li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+    <p><b>Your file will automatically be checked to make sure the quality is good enough.</b></p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
+        <li>the selected file must be smaller than 10MB</li>
+        <li>ensure all 4 corners of the fit note are within the image</li></ul>
+    </div>
+
+
+
+    <h1 class="govuk-heading-l">Choose a file to upload</h1>
+    <div class="govuk-form-group govuk-form-group--error">
+
+      <span id="dev-error-clear-sms" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> The selected file must be clear and readable, containing the whole fit note
+  </span>
+      <input class="govuk-file-upload govuk-file-upload--error" id="dev-error-clear-sms" name="dev-error-clear-sms" type="file" aria-describedby="dev-error-clear-sms">
+    </div>
+    <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

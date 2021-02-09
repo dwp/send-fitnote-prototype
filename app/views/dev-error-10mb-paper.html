@@ -1,0 +1,275 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="dev-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#dev-error-10mb-paper">The selected file must be smaller than 10MB</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Upload your fit note</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Take a photo of your fit note or scan it to your device.</li>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <li>Make sure:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you are in a well lit place</li>
+          <li>all of your fit note is in the image</li>
+        </ul></li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Save the photo or scan of your fit note somewhere you can easily find on your device.</li>
+    </ol>
+    <div class="govuk-!-padding-bottom-4"></div>
+    <style>
+            .both-scans {max-width: 100%}
+            .both-scans {max-height: auto}
+            </style>
+    <img src="/public/images/both-scans.png" class="both-scans" alt="Incorrectly taking a photograph from a side angle and correctly from above">
+
+    <div class="govuk-!-padding-bottom-5"></div>
+    <p><b>Your file will automatically be checked to make sure the quality is good enough.</b></p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
+        <li>the selected file must be smaller than 10MB</li>
+        <li>ensure all 4 corners of the fit note are within the image</li></ul>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Get more help to get your photo right
+    </span>
+      </summary>
+      <div class="govuk-!-padding-bottom-7"></div>
+      <h1 class="govuk-heading-m">If you are having difficulty uploading your fit note, please follow the below instructions</h1>
+      <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+        <ol class="app-step-nav__steps">
+          <li class="app-step-nav__step js-step" id="hold-the-device-directly-above-the-fit-note" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="1">
+              <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 1
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Hold the device directly above the fit note
+              </span>
+              </h2>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-hold-the-device-directly-above-the-fit-note-1">
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>it is best to hold the device about 20cm / 1 foot above the fit note</li>
+                <li>avoid taking the photo at an angle</li>
+                <li>hold the device directly above the fit note</li></ul>
+
+              <style>
+            .both-scans {max-width: 100%}
+            .both-scans {max-height: auto}
+            </style>
+              <img src="/public/images/both-scans.png" class="both-scans" alt="Incorrectly taking a photograph from a side angle and correctly from above">
+              <div class="govuk-!-padding-bottom-4"></div>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="Find-a-well-lit-place-and-avoid-shadows" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="2">
+              <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 2
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Find a well lit place and avoid shadows
+              </span>
+              </h2>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-Find-a-well-lit-place-and-avoid-shadows-2">
+              <ol class="app-step-nav__list " data-length="1">
+                <li class="app-step-nav__list-item js-list-item ">
+                <li><b>Make sure:</b>
+                  <div class="govuk-!-padding-bottom-3"></div>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>your fit note is well lit</li>
+                    <li>the device screen is bright enough to see the image of your fit note clearly</li>
+                    <li>nothing is between your fit note and the light to avoid any shadows</li>
+                  </ul>
+              </ol>
+              <style>
+            .fit-note-shadow {max-width: 100%}
+            .fit-note-shadow {max-height: auto}
+            </style>
+              <img src="/public/images/fit-note-shadow.png" class="fit-note-shadow" alt="Incorrectly having a photograph with a shadow and a correct clear photograph">
+              <div class="govuk-!-padding-bottom-1"></div>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="Make-sure-your-fit-note-is-sideways-or-landscape" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="3">
+              <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 3
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Make sure your fit note is sideways or 'landscape'
+              </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-Make-sure-your-fit-note-is-sideways-or-landscape-2">
+              <div class="govuk-text"><p>Ensure that your image includes your whole fit note by holding your device sideways or 'landscape'.</p></div>
+              <ol class="app-step-nav__list " data-length="1">
+                <li class="app-step-nav__list-item js-list-item "></li>
+                <style>
+            .fit-note-landscape {max-width: 100%}
+            .fit-note-landscape {max-height: auto}
+            </style>
+                <img src="/public/images/fit-note-landscape.png" class="fit-note-landscape" alt="An incorrect photograph of a landscape fit note taken portrait and correctly landscape">
+                <div class="govuk-!-padding-bottom-1"></div>
+              </ol>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="book-and-manage-your-theory-test" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="5">
+              <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 4
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Make sure the whole fit note is in the photo
+              </span>
+              </h2>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
+              <p class="app-step-nav__paragraph">Ensure that your image includes your whole fit note. It should fill the photo and all 4 corners should be inside it.</p>
+              <style>
+            .fit-note-zoom {max-width: 100%}
+            .fit-note-zoom {max-height: auto}
+            </style>
+              <img src="/public/images/fit-note-zoom.png" class="fit-note-zoom" alt="An incorrect photograph of a zoomed in fit note and a correct clear photograph of a fit note">
+              <div class="govuk-!-padding-bottom-1"></div>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="make-sure-the-photo-isnt-blurred" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="6">
+              <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 5
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Make sure the image is clear and not blurred
+              </span>
+              </h2>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-make-sure-the-photo-isnt-blurred-6">
+              <p class="app-step-nav__paragraph">A clear image will help us to better access your fit note.</p>
+              <p>If you are not sure how to get a clear, sharp image, please check your device manual.</p>
+              <style>
+            .fit-note-blur {max-width: 100%}
+            .fit-note-blur {max-height: auto}
+            </style>
+              <img src="/public/images/fit-note-blur.png" class="fit-note-blur" alt="Incorrect blurred photograph and a correct clear photograph">
+              <div class="govuk-!-padding-bottom-1"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </details>
+
+    <h1 class="govuk-heading-l">Choose a file to upload</h1>
+    <div class="govuk-form-group govuk-form-group--error">
+
+      <span id="dev-error-10mb-paper-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> The selected file must be smaller than 10MB
+  </span>
+      <input class="govuk-file-upload govuk-file-upload--error" id="dev-error-10mb-paper" name="dev-error-10mb-paper" type="file" aria-describedby="dev-error-10mb-paper-error">
+    </div>
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

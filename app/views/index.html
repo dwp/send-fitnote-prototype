@@ -86,64 +86,191 @@
                   <h2 class="govuk-heading-s">
                       1. Server Errors</h2>
 
-                  <form class="form" action="dev-404-error" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1a. 404 Server Error</b></button></form>
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Server error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-404-error" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1a. 404 Server Error</b></button></form>
 
-                  <form class="form" action="dev-500-error" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1b. 500 Server Error</b></button></form>
+                      <form class="form" action="dev-500-error" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1b. 500 Server Error</b></button></form>
 
-                  <form class="form" action="dev-503-error" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1c. 503 Server Error</b></button></form>
-
-                  <h2 class="govuk-heading-s">
-                      2. The selected file must be smaller than 10MB</h2>
-                  <form class="form" action="dev-error-10mb" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>2. File Size Error</b></button></form>
-
-                  <h2 class="govuk-heading-s">
-                      3. The selected file must be a JPG, JPEG, BMP, PNG, TIF or PDF</h2>
-                  <form class="form" action="dev-error-file-type" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>3. File-Type Error</b></button></form>
+                      <form class="form" action="dev-503-error" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1c. 503 Server Error</b></button></form>
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      4. Selected file must be clear and readable, containing the whole fit note</h2>
-                  <form class="form" action="dev-error-clear" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>4. Reading Error</b></button></form>
+                      2. Do you have a fit note radio error</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Fit note radio error
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-do-you-have-a-fit-note" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>2. Unselected Radio Button Error</b></button></form>
+
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      5. You must select a file to continue</h2>
-                  <form class="form" action="dev-error-file-continue" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>5. Unselected File Error</b></button></form>
+                      3. How did you obtain your fit note error</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Fit note journey selection radio error
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-three-options" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>3. Unselected Radio Button Error</b></button></form>
+
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      6. Select Yes if you would like to receive a text message</h2>
-                  <form class="form" action="dev-error-yes-text-message" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>6. Text Message Unselected Error</b></button></form>
+                      4. The selected file must be smaller than 10MB</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        File size error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-10mb-paper" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>4a. Paper: File Size Error</b></button></form>
+
+                      <form class="form" action="dev-error-10mb-sms" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>4b. SMS: File Size Error</b></button></form>
+
+                      <form class="form" action="dev-error-10mb-email" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>4c. Email: File Size Error</b></button></form>
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      7. Enter a National Insurance number in the correct format</h2>
-                  <form class="form" action="dev-error-ni-number-format" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>7. NI Number Error</b></button></form>
+                      5. The selected file must be a JPG, JPEG, BMP, PNG, TIF or PDF</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        File-type error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-file-type-paper" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>5a. Paper: File-Type Error</b></button></form>
+
+                      <form class="form" action="dev-error-file-type-sms" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>5b. SMS: File-Type Error</b></button></form>
+
+                      <form class="form" action="dev-error-file-type-email" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>5c. Email: File-Type Error</b></button></form>
+
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      8. Enter your post code</h2>
-                  <form class="form" action="dev-error-post-code" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>8. Unentered Post Code Error</b></button></form>
+                      6. Selected file must be clear and readable, containing the whole fit note</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Reading error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-clear-paper" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>6a. Paper: Reading Error</b></button></form>
+
+                      <form class="form" action="dev-error-clear-sms" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>6b. SMS: Reading Error</b></button></form>
+
+                      <form class="form" action="dev-error-clear-email" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>6c. Email: Reading Error</b></button></form>
+
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      9. Enter a real post code</h2>
-                  <form class="form" action="dev-error-real-post-code" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>9. Real Post Code Error</b></button></form>
+                      7. You must select a file to continue</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Unselected file error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-file-continue-paper" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>7a. Paper: Unselected File Error</b></button></form>
+
+                      <form class="form" action="dev-error-file-continue-sms" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>7b. SMS: Unselected File Error</b></button></form>
+
+                      <form class="form" action="dev-error-file-continue-email" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>7c. Email: Unselected File Error</b></button></form>
+
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      10. Enter your house name or number</h2>
-                  <form class="form" action="dev-error-house-name-or-number" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>10. House Address Error</b></button></form>
+                      8. Enter a National Insurance number in the correct format</h2>
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        National Insurance number error prototype
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <form class="form" action="dev-error-ni-number-format" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>8. NI Number Error</b></button></form>
+                  </details>
 
                   <h2 class="govuk-heading-s">
-                      11. Enter a mobile number, like 07700 900 982 or +44 7700 900 982</h2>
-                  <form class="form" action="dev-error-mobile-number-example" method="post">
-                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>11. Mobile Number Error</b></button></form>
+                      9. Address error prototypes</h2>
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Address error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <b>8a.</b> Enter your post code</p>
+                      <form class="form" action="dev-error-post-code" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>9a. Unentered Post Code Error</b></button></form>
+                      <h2 class="govuk-heading-s">
+                          8b. Enter a real post code</h2>
+                      <form class="form" action="dev-error-real-post-code" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>9b. Real Post Code Error</b></button></form>
+                      <h2 class="govuk-heading-s">
+                          8c. Enter your house name or number</h2>
+                      <form class="form" action="dev-error-house-name-or-number" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>9c. House Address Error</b></button></form>
+                  </details>
+
+                  <h2 class="govuk-heading-s">
+                      10. Text message selection errors</h2>
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                        Text message error prototypes
+                        </span>
+                      </summary>
+                      <div class="govuk-!-padding-bottom-6"></div>
+                      <p>
+                          <b>6a.</b> Select yes if you would like to receive a text message</p>
+                      <form class="form" action="dev-error-yes-text-message" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>10a. Text Message Unselected Error</b></button></form>
+                      <p><b>6b.</b> Enter a mobile number, like 07700 900 982 or +44 7700 900 982</p>
+                      <form class="form" action="dev-error-mobile-number-example" method="post">
+                          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>10b. Mobile Number Error</b></button></form>
+                  </details>
+
+
+
 
                   <div class="govuk-inset-text">
                       <!DOCTYPE html>

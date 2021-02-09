@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#dev-error-post-code">Enter your house name or number</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/index" method="post">
+
+        <h1 class="govuk-heading-l">Your address</h1>
+
+        <div class="govuk-form-group govuk-form-group--error">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-county">
+              House name or number
+            </label>
+            <span id="name-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter your house name or number
+  </span>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text" value="{{ data['address-county'] }}">
+          </div>
+
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" value="{{ data['address-postcode'] }}">
+
+        </div>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+        </ul>
+      </div>
+
+  </div>
+
+
+{% endblock %}
