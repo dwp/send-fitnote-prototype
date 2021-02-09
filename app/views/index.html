@@ -43,20 +43,11 @@
             <p class='govuk-body'>This section is for the Development Team. Please note that various elements of the Prototype will be <b>subject to change</b> as per User Testing. The Design Team will coordinate changes with the BA Team.</p>
 
             <div class="govuk-inset-text">
-                <b>Catalogue Prototype</b> is designed for the Development Team. Please develop the look and feel of the prototype and <b>do not replicate the code</b>. In addition, the 500 server error button can be located under <b>500 Server Error</b>.
+                <b>Catalogue Prototype</b> is designed for the Development Team. Please develop the look and feel of the prototype and <b>do not replicate the code</b>.
             </div>
 
             <form class="form" action="dev-start" method="post">
               <button class="govuk-button" data-module="govuk-button">Catalogue Prototype</button></form>
-
-              <form class="form" action="dev-404-error" method="post">
-                  <button class="govuk-button" data-module="govuk-button">404 Server Error</button></form>
-
-              <form class="form" action="dev-500-error" method="post">
-                  <button class="govuk-button" data-module="govuk-button">500 Server Error</button></form>
-
-              <form class="form" action="dev-503-error" method="post">
-                  <button class="govuk-button" data-module="govuk-button">503 Server Error</button></form>
 
               <div class="govuk-inset-text">
                   <!DOCTYPE html>
@@ -68,17 +59,111 @@
                   <img src="/public/images/welsh-flag.png" class="welsh-flag" alt="welsh-flag">
                   </html>
                   <div class="govuk-!-padding-bottom-3"></div>
-                  <b>Welsh Prototype</b> is designed for the Development Team. It is identical to the the above Catalogue Prototype, but in the <b>Welsh language</b>. Please develop the look and feel of the prototype and <b>do not replicate the code</b>. In addition, the Welsh 500 server error button can be located under <b>Welsh 500 Server Error</b>.
+                  <b>Welsh Prototype</b> is designed for the Development Team. It is identical to the the above Catalogue Prototype, but in the <b>Welsh language</b>. Please develop the look and feel of the prototype and <b>do not replicate the code</b>.
               </div>
 
               <form class="form" action="welsh-dev-start" method="post">
                   <button class="govuk-button" data-module="govuk-button">Welsh Prototype</button></form>
 
-              <form class="form" action="welsh-dev-500-error" method="post">
-                  <button class="govuk-button" data-module="govuk-button">Welsh 500 Server Error</button></form>
-
           </div>
         </div>
+
+          <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Error Messages for Developers
+        </span>
+                  </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <p class='govuk-body'>This section is for the Development Team. Please note that various elements of the Prototype will be <b>subject to change</b> as per User Testing. The Design Team will coordinate changes with the BA Team.</p>
+
+                  <div class="govuk-inset-text">
+                      <b>The error messages</b> are designed for the Development Team. Please develop the look and feel of the prototype and <b>do not replicate the code</b>.
+                  </div>
+
+                  <h2 class="govuk-heading-s">
+                      1. Server Errors</h2>
+
+                  <form class="form" action="dev-404-error" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1a. 404 Server Error</b></button></form>
+
+                  <form class="form" action="dev-500-error" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1b. 500 Server Error</b></button></form>
+
+                  <form class="form" action="dev-503-error" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>1c. 503 Server Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      2. The selected file must be smaller than 10MB</h2>
+                  <form class="form" action="dev-error-10mb" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>2. File Size Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      3. The selected file must be a JPG, JPEG, BMP, PNG, TIF or PDF</h2>
+                  <form class="form" action="dev-error-file-type" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>3. File-Type Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      4. Selected file must be clear and readable, containing the whole fit note</h2>
+                  <form class="form" action="dev-error-clear" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>4. Reading Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      5. You must select a file to continue</h2>
+                  <form class="form" action="dev-error-file-continue" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>5. Unselected File Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      6. Select Yes if you would like to receive a text message</h2>
+                  <form class="form" action="dev-error-yes-text-message" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>6. Text Message Unselected Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      7. Enter a National Insurance number in the correct format</h2>
+                  <form class="form" action="dev-error-ni-number-format" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>7. NI Number Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      8. Enter your post code</h2>
+                  <form class="form" action="dev-error-post-code" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>8. Unentered Post Code Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      9. Enter a real post code</h2>
+                  <form class="form" action="dev-error-real-post-code" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>9. Real Post Code Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      10. Enter your house name or number</h2>
+                  <form class="form" action="dev-error-house-name-or-number" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>10. House Address Error</b></button></form>
+
+                  <h2 class="govuk-heading-s">
+                      11. Enter a mobile number, like 07700 900 982 or +44 7700 900 982</h2>
+                  <form class="form" action="dev-error-mobile-number-example" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>11. Mobile Number Error</b></button></form>
+
+                  <div class="govuk-inset-text">
+                      <!DOCTYPE html>
+                      <style>
+
+            .welsh-flag {max-width: 20%}
+            .welsh-flag {max-height: auto}
+    </style>
+                      <img src="/public/images/welsh-flag.png" class="welsh-flag" alt="welsh-flag">
+                      </html>
+                      <div class="govuk-!-padding-bottom-3"></div>
+                      <b>The Welsh error messages</b> are designed for the Development Team. They are identical to the the above English error messages, but in the <b>Welsh language</b>. Please develop the look and feel of the prototype and <b>do not replicate the code</b>.
+                  </div>
+
+                  <form class="form" action="welsh-dev-500-error" method="post">
+                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button"><b>Welsh 500 Server Error</b></button></form>
+
+              </div>
+          </div>
+
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
