@@ -1,0 +1,37 @@
+.display-b         { display: block; }
+.display-ib        { display: inline-block; }
+
+// Hide for sighted users but allow a screen reader to access content
+.display-offscreen {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+// display a hidden element, on focus via Tabbing
+.display-offscreen:focus{
+    position:relative;
+    clip:auto;
+    width:auto;
+    height:auto;
+    overflow:auto;
+}
+
+// // This is used to hide the element only when JS is turned off
+// .js-disabled .display-offscreen-no-focus:focus{
+//     position:relative;
+//     clip:auto;
+//     width:auto;
+//     height:auto;
+//     overflow:auto;
+// }
+
+//Should always be the last display type. To ensure it overwrites and other display properties.
+[aria-hidden="true"]{
+    display: none;
+}
