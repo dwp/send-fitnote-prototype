@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v9-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Upload your fit note</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <html>
+    <head>
+      <style>
+    {
+        box-sizing: border-box;
+    }
+    .column {
+    float: left;
+    }
+
+    .left {
+    width: 12%;
+    }
+
+    .right {
+    width: 88%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    </style>
+    </head>
+    <body>
+    <div class="row">
+      <div class="column left">
+        <style>
+            .open-sms {max-width: 80%}
+            .open-sms {max-height: auto}
+            </style>
+        <center>
+        <img src="/public/images/open-sms.png" class="open-sms" alt="an icon of opening an SMS">
+        </center>
+
+      </div>
+      <div class="column right">
+        <p style="text-align:left-center; margin-top: 7px"><b>1.</b> Open your SMS sent to you by your doctor or GP practice containing your fit note.</p>
+      </div>
+    </div>
+    </body>
+    </html>
+
+    <html>
+    <head>
+      <style>
+    {
+        box-sizing: border-box;
+    }
+    .column {
+    float: left;
+    }
+
+    .left {
+    width: 12%;
+    }
+
+    .right {
+    width: 88%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    </style>
+    </head>
+    <body>
+    <div class="row">
+      <div class="column left">
+        <style ="text-align:left-center; margin-top: 7px">
+            .open-sms-link {max-width: 80%}
+            .open-sms-link {max-height: auto}
+            </style>
+        <center>
+        <img src="/public/images/open-sms-link.png" class="open-sms" class="center" alt="an icon of opening an SMS">
+        </center>
+
+      </div>
+      <div class="column right">
+        <p style="text-align:left-center; margin-top: 7px"><b>2.</b> Click on the link within your SMS from your doctor or GP practice.</p>
+      </div>
+    </div>
+    </body>
+    </html>
+
+
+    <html>
+    <head>
+      <style>
+    {
+        box-sizing: border-box;
+    }
+    .column {
+    float: left;
+    }
+
+    .left {
+    width: 12%;
+    }
+
+    .right {
+    width: 88%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    </style>
+    </head>
+    <body>
+    <div class="row">
+      <div class="column left">
+        <style ="text-align:left-center; margin-top: 7px">
+            .download {max-width: 80%}
+            .download {max-height: auto}
+            </style>
+        <center>
+          <img src="/public/images/open-sms-link.png" class="download" class="center" alt="an icon of a download symbol">
+        </center>
+
+      </div>
+      <div class="column right">
+        <p style="text-align:left-center; margin-top: 7px"><b>3.</b> Download your fit note onto your device.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li style="text-align:left-center; margin-top: 0px">for more information of how to download your fit note, please look at your device manual</li>
+          </ul>
+      </div>
+    </div>
+    </body>
+    </html>
+
+
+
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li class="circle-step">
+        <span class="circle-step-circle">1</span>
+        Open your SMS sent to you by your doctor or GP practice containing your fit note.</li>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Click on the link within your SMS from your doctor or GP practice.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download your fit note onto your device.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>for more information of how to download your fit note, please look at your device manual</li>
+        </ul></li>
+      <li>Upload your fit note.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your fit note may be saved in your device's <b>Downloads</b>, <b>Recents</b> or <b>Saved As</b> folder</li>
+        </ul></li>
+    </ol>
+
+
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your SMS sent to you by your doctor or GP practice containing your fit note.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Click on the link within your SMS from your doctor or GP practice.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download your fit note onto your device.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>for more information of how to download your fit note, please look at your device manual</li>
+        </ul></li>
+      <li>Upload your fit note.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your fit note may be saved in your device's <b>Downloads</b>, <b>Recents</b> or <b>Saved As</b> folder</li>
+        </ul></li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+    <p><b>Your file will automatically be checked to make sure the quality is good enough.</b></p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
+        <li>the selected file must be smaller than 10MB</li>
+        <li>ensure all 4 corners of the fit note are within the image</li></ul>
+    </div>
+
+
+
+    <h1 class="govuk-heading-l">Choose a file to upload</h1>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <form class="form" action="/v9-scanning-photo-sms" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
