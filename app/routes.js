@@ -214,4 +214,44 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                       })
 
 
+
+                                       router.route('/v10-do-you-have-a-fit-note')
+                                          .post((req, res, next) => {
+                                            let redirectUrl
+                                            // console.table(req.body)
+                                            switch (req.body['v10-do-you-have-a-fit-note']) {
+                                              case 'yes':
+                                                redirectUrl = 'v10-three-options'
+                                                break
+                                              case 'no':
+                                                redirectUrl = 'v10-no-fit-note'
+                                                break
+                                              default:
+                                                redirectUrl = req.path
+                                                break
+                                            }
+                                            res.redirect(redirectUrl)
+                                          })
+
+                                          router.route('/v10-three-options-select')
+                                            .post((req, res, next) => {
+                                              let redirectUrl
+                                              switch (req.body['v10-obtained-fit-note']) {
+                                                case 'paper':
+                                                  redirectUrl = 'v10-upload-paper'
+                                                  break
+                                                case 'sms':
+                                                  redirectUrl = 'v10-upload-sms'
+                                                  break
+                                                case 'email':
+                                                  redirectUrl = 'v10-upload-email'
+                                                  break
+                                                default:
+                                                  redirectUrl = req.path
+                                                  break
+                                              }
+                                              res.redirect(redirectUrl)
+                                            })
+
+
 module.exports = router

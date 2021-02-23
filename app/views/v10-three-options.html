@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v10-do-you-have-a-fit-note">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v10-three-options-select" method="POST">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How did you get your fit note?
+              </h1>
+            </legend>
+            <div id="v10-three-options-select-hint" class="govuk-hint">
+              To make sure your fit note is uploaded correctly, select one of the following options.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v10-obtained-fit-note" name="v10-obtained-fit-note" type="radio" value="paper">
+                <label class="govuk-label govuk-radios__label" for="v10-obtained-fit-note">
+                  I have a paper copy of my fit note
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v10-obtained-fit-note-2" name="v10-obtained-fit-note" type="radio" value="sms">
+                <label class="govuk-label govuk-radios__label" for="v10-obtained-fit-note-2">
+                  I have a text message with a link to my fit note
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v10-obtained-fit-note-3" name="v10-obtained-fit-note" type="radio" value="email">
+                <label class="govuk-label govuk-radios__label" for="v10-obtained-fit-note-3">
+                  I have an email with a link to my fit note
+                </label>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+        </ul>
+
+      </div>
+
+  </div>
+
+{% endblock %}
