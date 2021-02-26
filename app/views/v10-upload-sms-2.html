@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Upload your fit note text - Send your fit note - GOV.UK
+  Step by step navigation
 {% endblock %}
 
 {% block pageScripts %}
@@ -14,7 +14,7 @@ Upload your fit note text - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v9-three-options">Back</a>
+  <a class="govuk-back-link" href="v10-three-options">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -31,18 +31,13 @@ Upload your fit note text - Send your fit note - GOV.UK
       <div class="govuk-!-padding-bottom-3"></div>
       <li>Click on the link within your text message from your doctor or GP practice.</li>
       <div class="govuk-!-padding-bottom-3"></div>
-      <li>Download your fit note onto your device.
-        <ul class="govuk-list govuk-list--bullet">
-          <li>for more information of how to download your fit note, please look at your device manual</li>
-        </ul></li>
-      <li>Upload your fit note.
-        <ul class="govuk-list govuk-list--bullet">
-          <li>your fit note may be saved in your device's <b>Downloads</b>, <b>Recents</b> or <b>Saved As</b> folder</li>
-        </ul></li>
+      <li>Download your fit note onto your device. For more information of how to download your fit note, please look at your device manual</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Upload your fit note. Your fit note may be saved in your device's Downloads, Recents or Saved As folder</li>
     </ol>
 
     <div class="govuk-!-padding-bottom-2"></div>
-    <p><b>Your file will automatically be checked to make sure the quality is good enough.</b></p>
+    <p>Your file will automatically be checked to make sure the quality is good enough.</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
@@ -54,7 +49,7 @@ Upload your fit note text - Send your fit note - GOV.UK
     <h1 class="govuk-heading-l">Choose a file to upload</h1>
     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     <div class="govuk-!-padding-bottom-6"></div>
-    <form class="form" action="/v9-scanning-photo-sms" method="post">
+    <form class="form" action="/v10-scanning-photo-sms" method="post">
       <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>

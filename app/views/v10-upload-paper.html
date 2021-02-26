@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Step by step navigation
+Upload your fit note paper - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block pageScripts %}
@@ -21,7 +21,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Upload your fit note</h1>
+    <h1 class="govuk-heading-xl">Upload your fit note</h1>
 
     <div class="govuk-!-padding-bottom-2"></div>
 
@@ -29,11 +29,7 @@
 
       <li>Take a photo of your fit note or scan it to your device.</li>
       <div class="govuk-!-padding-bottom-5"></div>
-      <li>Make sure:
-        <ul class="govuk-list govuk-list--bullet">
-          <li>you are in a well lit place</li>
-          <li>all of your fit note is in the image</li>
-        </ul></li>
+      <li>Make sure that you are in a well lit place and that all of your fit note is in the image.</li>
       <div class="govuk-!-padding-bottom-3"></div>
       <li>Save the photo or scan of your fit note somewhere you can easily find on your device.</li>
     </ol>
@@ -42,15 +38,19 @@
             .both-scans {max-width: 100%}
             .both-scans {max-height: auto}
             </style>
-    <img src="/public/images/both-scans.png" class="both-scans" alt="Incorrectly taking a photograph from a side angle and correctly from above">
+    <img src="/public/images/both-scans.png" class="both-scans" alt="Take a photograph of your fit note directly from above rather than from an angle to ensure the whole fit note is included.
+
+">
 
     <div class="govuk-!-padding-bottom-5"></div>
     <p>Your file will automatically be checked to make sure the quality is good enough.</p>
 
+    <h3 class="govuk-heading-l">When uploading your fit note:</h3>
+
       <ul class="govuk-list govuk-list--bullet">
-        <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
-        <li>the selected file must be smaller than 10MB</li>
-        <li>ensure all 4 corners of the fit note are within the image</li></ul>
+        <li>the file must be a JPG, BMP. PNG, TIF or PDF</li>
+        <li>the file must be smaller than 10MB</li>
+        <li>all 4 corners of the fit note must be within the image</li></ul>
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
@@ -226,7 +226,7 @@
       </div>
     </details>
 
-    <h1 class="govuk-heading-l">Choose a file to upload</h1>
+    <h2 class="govuk-heading-l">Choose a file to upload</h2>
     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     <div class="govuk-!-padding-bottom-6"></div>
     <form class="form" action="/v10-scanning-photo-paper" method="post">

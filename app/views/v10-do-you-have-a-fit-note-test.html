@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Do you have a fit note - send your fit note - GOV.UK
+  Question page
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="dev-start">Back</a>
+<a class="govuk-back-link" href="v10-start">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -13,12 +13,12 @@ Do you have a fit note - send your fit note - GOV.UK
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/dev-do-you-have-a-fit-note" method="post">
+      <form class="form" action="/v10-do-you-have-a-fit-note" method="post">
       <div class="govuk-form-group">
         <div class="govuk-form-group">
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="dev-do-you-have-a-fit-note-hint">
+            <fieldset class="govuk-fieldset" aria-describedby="v10-do-you-have-a-fit-note-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
                   Do you have a fit note?
@@ -27,44 +27,41 @@ Do you have a fit note - send your fit note - GOV.UK
               <div id="contact-hint" class="govuk-hint">
                 Does your document look like the below example?
               </div>
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <!DOCTYPE html>
+              <style>
+                              .example-fit-note {max-width: 100%}
+                              .example-fit-note {max-height: auto}
+        </style>
+                <img src="/public/images/example-fit-note.png" class="example-fit-note" alt="An example of a fit note">
+              </html>
+
+              <div class="govuk-!-padding-bottom-4"></div>
+
+              <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="dev-do-you-have-a-fit-note" name="dev-do-you-have-a-fit-note" type="radio" value="yes" data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-radios__label" for="dev-do-you-have-a-fit-note">
+                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
                     Yes
                   </label>
                 </div>
-
-
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="dev-do-you-have-a-fit-note-2" name="dev-do-you-have-a-fit-note" type="radio" value="no" data-aria-controls="conditional-contact-2">
-                  <label class="govuk-label govuk-radios__label" for="dev-do-you-have-a-fit-note-2">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
                     No
                   </label>
                 </div>
+              </div>
 
                 </div>
 
-            </fieldset>
-          </div>
 
           </fieldset>
         </div>
 
           <div class="govuk-!-padding-bottom-1"></div>
-
-          <!DOCTYPE html>
-          <style>
-
-                              .example-fit-note {max-width: 100%}
-                              .example-fit-note {max-height: auto}
-        </style>
-          <center>
-          <img src="/public/images/example-fit-note.png" class="example-fit-note" alt="An example of a fit note">
-          </center>
-          </html>
-
-          <div class="govuk-!-padding-bottom-6"></div>
           <button class="govuk-button" data-module="govuk-button">Continue</button>
           </form>
         </fieldset>

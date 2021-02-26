@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Upload your fit note paper - Send your fit note - GOV.UK
+  Step by step navigation
 {% endblock %}
 
 {% block pageScripts %}
@@ -14,7 +14,7 @@ Upload your fit note paper - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="dev-three-options">Back</a>
+  <a class="govuk-back-link" href="v10-three-options">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -29,11 +29,7 @@ Upload your fit note paper - Send your fit note - GOV.UK
 
       <li>Take a photo of your fit note or scan it to your device.</li>
       <div class="govuk-!-padding-bottom-5"></div>
-      <li>Make sure:
-        <ul class="govuk-list govuk-list--bullet">
-          <li>you are in a well lit place</li>
-          <li>all of your fit note is in the image</li>
-        </ul></li>
+      <li>Make sure that you are in a well lit place and that all of your fit note is in the image.</li>
       <div class="govuk-!-padding-bottom-3"></div>
       <li>Save the photo or scan of your fit note somewhere you can easily find on your device.</li>
     </ol>
@@ -42,12 +38,10 @@ Upload your fit note paper - Send your fit note - GOV.UK
             .both-scans {max-width: 100%}
             .both-scans {max-height: auto}
             </style>
-    <img src="/public/images/both-scans.png" class="both-scans" alt="Take a photograph of your fit note directly from above rather than from an angle to ensure the whole fit note is included.
-
-">
+    <img src="/public/images/both-scans.png" class="both-scans" alt="Incorrectly taking a photograph from a side angle and correctly from above">
 
     <div class="govuk-!-padding-bottom-5"></div>
-    <p><b>Your file will automatically be checked to make sure the quality is good enough.</b></p>
+    <p>Your file will automatically be checked to make sure the quality is good enough.</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
@@ -231,7 +225,7 @@ Upload your fit note paper - Send your fit note - GOV.UK
     <h1 class="govuk-heading-l">Choose a file to upload</h1>
     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     <div class="govuk-!-padding-bottom-6"></div>
-    <form class="form" action="/dev-scanning-photo-paper" method="post">
+    <form class="form" action="/v10-scanning-photo-paper" method="post">
       <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>
