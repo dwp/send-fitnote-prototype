@@ -254,4 +254,86 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                             })
 
 
+                                          router.route('/v11-do-you-have-a-fit-note')
+                                             .post((req, res, next) => {
+                                               let redirectUrl
+                                               // console.table(req.body)
+                                               switch (req.body['v11-do-you-have-a-fit-note']) {
+                                                 case 'yes':
+                                                   redirectUrl = 'v11-does-your-fit-note-have-a-signature'
+                                                   break
+                                                 case 'no':
+                                                   redirectUrl = 'v11-no-fit-note'
+                                                   break
+                                                 default:
+                                                   redirectUrl = req.path
+                                                   break
+                                               }
+                                               res.redirect(redirectUrl)
+                                             })
+
+
+                                                router.route('/v11-does-your-fit-note-have-a-signature')
+                                                   .post((req, res, next) => {
+                                                     let redirectUrl
+                                                     // console.table(req.body)
+                                                     switch (req.body['v11-does-your-fit-note-have-a-signature']) {
+                                                       case 'yes':
+                                                         redirectUrl = 'v11-fit-note-template'
+                                                         break
+                                                       case 'no':
+                                                         redirectUrl = 'v11-no-signature'
+                                                         break
+                                                       default:
+                                                         redirectUrl = req.path
+                                                         break
+                                                     }
+                                                     res.redirect(redirectUrl)
+                                                   })
+
+
+                                                router.route('/v11-fit-note-template')
+                                                   .post((req, res, next) => {
+                                                     let redirectUrl
+                                                     // console.table(req.body)
+                                                     switch (req.body['v11-fit-note-template']) {
+                                                       case 'yes':
+                                                         redirectUrl = 'v11-three-options'
+                                                         break
+                                                       case 'no':
+                                                         redirectUrl = 'v11-wrong-template'
+                                                         break
+                                                       default:
+                                                         redirectUrl = req.path
+                                                         break
+                                                     }
+                                                     res.redirect(redirectUrl)
+                                                   })
+
+
+
+                                             router.route('/v11-three-options-select')
+                                               .post((req, res, next) => {
+                                                 let redirectUrl
+                                                 switch (req.body['v11-obtained-fit-note']) {
+                                                   case 'paper':
+                                                     redirectUrl = 'v11-upload-paper'
+                                                     break
+                                                   case 'sms':
+                                                     redirectUrl = 'v11-upload-sms'
+                                                     break
+                                                   case 'email':
+                                                     redirectUrl = 'v11-upload-email'
+                                                     break
+                                                   default:
+                                                     redirectUrl = req.path
+                                                     break
+                                                 }
+                                                 res.redirect(redirectUrl)
+                                               })
+
+
+
+
+
 module.exports = router

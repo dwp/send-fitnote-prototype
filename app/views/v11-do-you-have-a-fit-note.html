@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="v10-start">Back</a>
+<a class="govuk-back-link" href="v11-start">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -13,22 +13,32 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/v10-do-you-have-a-fit-note" method="post">
+      <form class="form" action="/v11-do-you-have-a-fit-note" method="post">
       <div class="govuk-form-group">
         <div class="govuk-form-group">
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="v10-do-you-have-a-fit-note-hint">
+            <fieldset class="govuk-fieldset" aria-describedby="v11-do-you-have-a-fit-note-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
                   Do you have a fit note?
                 </h1>
               </legend>
-              <div id="contact-hint" class="govuk-hint">
-                Does your document look like the below example?
-              </div>
 
-              <div class="govuk-!-padding-bottom-1"></div>
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <h3 class="govuk-heading-m">Does your document say:</h3>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>'Statement of Fitness for Work' on the top left?</li>
+                  <li>'For the patient - what to do now' on the top right?</li>
+
+
+
+                <div class="govuk-!-padding-bottom-1"></div>
+
+
+              <div class="govuk-!-padding-bottom-3"></div>
 
               <!DOCTYPE html>
               <style>
@@ -40,16 +50,17 @@
 
               <div class="govuk-!-padding-bottom-4"></div>
 
+
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                  <input class="govuk-radios__input" id="v11-do-you-have-a-fit-note" name="v11-do-you-have-a-fit-note" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="v11-do-you-have-a-fit-note">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  <input class="govuk-radios__input" id="v11-do-you-have-a-fit-note-2" name="v11-do-you-have-a-fit-note" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="v11-do-you-have-a-fit-note-2">
                     No
                   </label>
                 </div>
@@ -61,7 +72,6 @@
           </fieldset>
         </div>
 
-          <div class="govuk-!-padding-bottom-1"></div>
           <button class="govuk-button" data-module="govuk-button">Continue</button>
           </form>
         </fieldset>
