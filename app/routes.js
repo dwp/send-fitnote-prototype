@@ -317,13 +317,13 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                  let redirectUrl
                                                  switch (req.body['v11-obtained-fit-note']) {
                                                    case 'paper':
-                                                     redirectUrl = 'v11-upload-paper'
+                                                     redirectUrl = 'v11-upload-paper-1'
                                                      break
                                                    case 'sms':
-                                                     redirectUrl = 'v11-upload-sms'
+                                                     redirectUrl = 'v11-upload-sms-1'
                                                      break
                                                    case 'email':
-                                                     redirectUrl = 'v11-upload-email'
+                                                     redirectUrl = 'v11-upload-email-1'
                                                      break
                                                    default:
                                                      redirectUrl = req.path
