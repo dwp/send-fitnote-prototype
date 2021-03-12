@@ -279,7 +279,7 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                      // console.table(req.body)
                                                      switch (req.body['v11-does-your-fit-note-have-a-signature']) {
                                                        case 'yes':
-                                                         redirectUrl = 'v11-fit-note-template'
+                                                         redirectUrl = 'v11-three-options'
                                                          break
                                                        case 'no':
                                                          redirectUrl = 'v11-no-signature'
@@ -298,7 +298,7 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                      // console.table(req.body)
                                                      switch (req.body['v11-fit-note-template']) {
                                                        case 'yes':
-                                                         redirectUrl = 'v11-three-options'
+                                                         redirectUrl = 'v11-upload-paper-1'
                                                          break
                                                        case 'no':
                                                          redirectUrl = 'v11-wrong-template'
@@ -317,7 +317,7 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                  let redirectUrl
                                                  switch (req.body['v11-obtained-fit-note']) {
                                                    case 'paper':
-                                                     redirectUrl = 'v11-upload-paper-1'
+                                                     redirectUrl = 'v11-fit-note-template'
                                                      break
                                                    case 'sms':
                                                      redirectUrl = 'v11-upload-sms-1'

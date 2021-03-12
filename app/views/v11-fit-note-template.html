@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="v11-does-your-fit-note-have-a-signature">Back</a>
+<a class="govuk-back-link" href="v11-three-options">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -21,15 +21,12 @@
             <fieldset class="govuk-fieldset" aria-describedby="v11-fit-note-template-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                    Is your fit note on one single page?
+                    Is your fit note on a single page?
                 </h1>
               </legend>
-
-                <h3 class="govuk-heading-m">Is your fit note either:</h3>
-
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>on paper and with a blank page at the back</li>
-                    <li>a one page digital file</li>
+                <div id="event-name-hint" class="govuk-hint">
+                    Your fit note must be on one side of paper with a blank page at the back.
+                </div>
 
               <div class="govuk-!-padding-bottom-4"></div>
 
@@ -61,7 +58,7 @@
                   </html>
 
                   <center>
-                  <h3 class="govuk-heading-s">Back page</h3>
+                  <h3 class="govuk-heading-s">Blank back page</h3>
                   </center>
 
                 </div>
@@ -89,6 +86,9 @@
 
           </fieldset>
         </div>
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
 
           <button class="govuk-button" data-module="govuk-button">Continue</button>
           </form>
