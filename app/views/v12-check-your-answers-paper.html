@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your details - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-text-message-paper">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your details before sending your fit note</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="v12-ni-number-paper">
+              Change
+              <span class="govuk-visually-hidden"> National Insurance number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}
+            <br>{{ data['address-line-2'] }}
+            <br>{{ data['address-town'] }}
+            <br>{{ data['address-county'] }}
+            <br>{{ data['address-postcode'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="v12-address-paper">
+              Change
+              <span class="govuk-visually-hidden"> Your address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Confirmation text message
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contact-by-phone'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="v12-text-message-paper">
+              Change
+              <span class="govuk-visually-hidden"> Confirmation text message</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="/v12-confirmation-paper" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit fit note
+        </button>
+
+      </form>
+
+    </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  </div>
+
+
+{% endblock %}

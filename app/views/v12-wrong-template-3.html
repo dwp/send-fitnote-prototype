@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Not a fit note - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-fit-note-template">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Post your fit note</h1>
+
+    <p class="govuk-body">To process your claim further, post your fit note to:</p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list">
+        <li>Freepost DWP</li>
+        <li>ESA 26</li>
+      </ul>
+    </div>
+
+    <p class="govuk-body">You do not need a postage stamp. Make sure you keep a copy or photograph of your fit note for your own records.</p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <p><a href="/v12-start">Go back to Send your fit note</a></p>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
+</div>

@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Not a fit note - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-fit-note-template">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">This service can only process fit notes that are on one single page</h1>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <center>
+        <!DOCTYPE html>
+        <style>
+            .one-sided-fit-note-correct-1 {max-width: 80%}
+            .one-sided-fit-note-correct-1 {max-height: auto}
+        </style>
+        <img src="/public/images/one-sided-fit-note-correct-1.png" class="one-sided-fit-note-correct-1" alt="A correct image of a fit note on one single page">
+        </html>
+          </center>
+
+        <center>
+          <h3 class="govuk-heading-s">Front page</h3>
+        </center>
+
+      </div>
+
+
+
+      <div class="govuk-grid-column-one-half">
+        <center>
+        <!DOCTYPE html>
+        <style>
+            .two-sided-fit-note-wrong-1 {max-width: 80%}
+            .two-sided-fit-note-wrong-1 {max-height: auto}
+        </style>
+        <img src="/public/images/two-sided-fit-note-wrong-1.png" class="two-sided-fit-note-wrong-1" alt="An incorrect image of a fit note on multiple pages">
+        </html>
+          </center>
+
+        <center>
+          <h3 class="govuk-heading-s">Back page</h3>
+        </center>
+
+      </div>
+    </div>
+
+
+
+    <h2 class="govuk-heading-m">My fit note is not on one single page</h2>
+
+    <p class="govuk-body">
+      Your doctor may have provided you with a fit note that is:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>on two separate pages</li>
+      <li>is printed on the front and back of the same piece of paper</li></ul>
+
+      <p class="govuk-body">
+        These fit notes cannot be processed.</p>
+
+    <center>
+      <!DOCTYPE html>
+      <style>
+
+            .two-sided-fit-note-wrong {max-width: 80%}
+            .two-sided-fit-note-wrong {max-height: auto}
+    </style>
+      <img src="/public/images/two-sided-fit-note-wrong.png" class="two-sided-fit-note-wrong" alt="An incorrect image of a fit note on multiple pages">
+      </html>
+    </center>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <h2 class="govuk-heading-m">Next steps</h2>
+
+    <p class="govuk-body">
+      In order to progress your claim, you can contact your doctor for a fit note that is on one single page.</p>
+
+    <p class="govuk-body">
+      Alternatively you can post your fit note, but payment may be delayed to allow for delivery and processing.</p>
+
+    <center>
+    <!DOCTYPE html>
+    <style>
+
+            .one-sided-fit-note-correct {max-width: 80%}
+            .one-sided-fit-note-correct {max-height: auto}
+    </style>
+    <img src="/public/images/one-sided-fit-note-correct.png" class="one-sided-fit-note-correct" alt="A correct image of a fit note on one single page">
+    </html>
+    </center>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <h1 class="govuk-heading-m">Post your fit note</h1>
+    <p class="govuk-body">You can post your fit note to:</p>
+
+    <div class="govuk-inset-text">
+      <ul class="govuk-list">
+        <li>Freepost DWP</li>
+        <li>ESA 26</li>
+      </ul>
+    </div>
+
+    <p class="govuk-body">You do not need a postage stamp. Make sure you keep a copy of your fit note for your own record (for example a photo).</p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <p><a href="/v12-start">Go back to Send your fit note</a></p>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
+</div>

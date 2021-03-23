@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How to upload your fit note - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">How to upload your fit note</h1>
+
+    <p>To upload your fit note:</p>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your email sent to you by your doctor or GP practice containing your fit note.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download your fit note which was attached on your email. This may automatically be added to your 'Downloads', 'Recents' or 'Saved As' folder.</li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+
+    <form class="form" action="/v12-upload-email-2" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
