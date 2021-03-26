@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-This service can only process fit notes that are on one single page - Send your fit note - GOV.UK
+Only a fit note can be uploaded and processed by this service - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block pageScripts %}
@@ -14,52 +14,49 @@ This service can only process fit notes that are on one single page - Send your 
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v12-fit-note-template">Back</a>
+  <a class="govuk-back-link" href="v12-do-you-have-a-fit-note">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">This service can only process fit notes that are on one single page</h1>
+    <h1 class="govuk-heading-l">Only a fit note can be uploaded and processed by this service</h1>
 
     <p class="govuk-body">
-      Your doctor may have provided you with a fit note that is:</p>
+      Alternative medical evidence, such as:</p>
+
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>on two separate pages</li>
-      <li>printed on the front and back</li>
-      <li>on multiple pages</li></ul>
+      <li>medical letters</li>
+      <li>isolation notes</li>
+      <li>MED 10s</li></ul>
 
-    <p class="govuk-body">
-      These cannot be uploaded onto this service, but can instead be posted to ESA.</p>
+    <p>Cannot be uploaded and but can be posted instead.</p>
 
-    <center>
+
       <!DOCTYPE html>
       <style>
 
-            .two-sided-fit-note-wrong {max-width: 80%}
-            .two-sided-fit-note-wrong {max-height: auto}
+            .not-accepted {max-width: 100%}
+            .not-accepted {max-height: auto}
     </style>
-      <img src="/public/images/two-sided-fit-note-wrong.png" class="two-sided-fit-note-wrong" alt="An incorrect image of a fit note on multiple pages">
+      <img src="/public/images/not-accepted.png" class="not-accepted" alt="Examples of a medical letter, isolation note and a MED 10 form">
       </html>
-    </center>
 
-    <div class="govuk-!-padding-bottom-4"></div>
+    <div class="govuk-!-padding-bottom-3"></div>
 
-    <h1 class="govuk-heading-m">Post your fit note</h1>
-    <p class="govuk-body">If you do not have a fit note on one single page, post it directly to ESA using the address:</p>
+    <h1 class="govuk-heading-m">Post medical evidence</h1>
+    <p class="govuk-body">Post alternative medical evidence directly to ESA using the address:</p>
 
     <div class="govuk-inset-text">
-      <ul class="govuk-list">
-        <li>Freepost DWP</li>
-        <li>ESA 26</li>
-      </ul>
+    <ul class="govuk-list">
+      <li>Freepost DWP</li>
+      <li>ESA 26</li>
+    </ul>
     </div>
 
     <p class="govuk-body">You do not need a postage stamp. Make sure you keep a copy of any medical evidence for your own record.</p>
-
-    <div class="govuk-!-padding-bottom-3"></div>
 
     <p><a href="/v12-start">Go back to Send your fit note</a></p>
 

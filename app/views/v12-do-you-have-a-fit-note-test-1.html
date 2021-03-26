@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Is your fit note signed by your doctor - Send your fit note - GOV.UK
+  Question page
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="v12-do-you-have-a-fit-note">Back</a>
+<a class="govuk-back-link" href="v12-start">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -13,44 +13,43 @@ Is your fit note signed by your doctor - Send your fit note - GOV.UK
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/v12-does-your-fit-note-have-a-signature" method="post">
+      <form class="form" action="/v12-do-you-have-a-fit-note" method="post">
       <div class="govuk-form-group">
         <div class="govuk-form-group">
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="v12-does-your-fit-note-have-a-signature-hint">
+            <fieldset class="govuk-fieldset" aria-describedby="v12-do-you-have-a-fit-note-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Is your fit note signed by your doctor?
+                  Do you have a fit note?
                 </h1>
               </legend>
 
-              <div id="more-detail-hint" class="govuk-hint">
-                Check that your fit note has a hand written doctor's signature.
+              <div id="11-do-you-have-a-fit-note-hint" class="govuk-hint">
+                Check that your document says 'Statement of Fitness for Work' in the top left corner.
               </div>
-
-              <div class="govuk-!-padding-bottom-2"></div>
 
               <!DOCTYPE html>
               <style>
-                              .signed-fit-note {max-width: 100%}
-                              .signed-fit-note {max-height: auto}
+                              .one-page-fit-note {max-width: 100%}
+                              .one-page-fit-note {max-height: auto}
         </style>
-                <img src="/public/images/signed-fit-note.png" class="signed-fit-note" alt="A signed fit note">
+                <img src="/public/images/one-page-fit-note.png" class="one-page-fit-note" alt="An example of a fit note">
               </html>
 
               <div class="govuk-!-padding-bottom-6"></div>
 
+
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="v12-does-your-fit-note-have-a-signature" name="v12-does-your-fit-note-have-a-signature" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="v12-does-your-fit-note-have-a-signature">
+                  <input class="govuk-radios__input" id="v12-do-you-have-a-fit-note" name="v12-do-you-have-a-fit-note" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="v12-do-you-have-a-fit-note">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="v12-does-your-fit-note-have-a-signature-2" name="v12-does-your-fit-note-have-a-signature" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="v12-does-your-fit-note-have-a-signature-2">
+                  <input class="govuk-radios__input" id="v12-do-you-have-a-fit-note-2" name="v12-do-you-have-a-fit-note" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="v12-do-you-have-a-fit-note-2">
                     No
                   </label>
                 </div>
@@ -61,8 +60,7 @@ Is your fit note signed by your doctor - Send your fit note - GOV.UK
 
           </fieldset>
         </div>
-
-          <div class="govuk-!-padding-bottom-1"></div>
+        <div class="govuk-!-padding-bottom-1"></div>
           <button class="govuk-button" data-module="govuk-button">Continue</button>
           </form>
         </fieldset>
