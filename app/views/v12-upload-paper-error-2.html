@@ -14,17 +14,35 @@ Choose a file to upload - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v12-upload-sms-1">Back</a>
+  <a class="govuk-back-link" href="v12-upload-paper-1">Back</a>
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#dev-error-clear-email">The selected file must be clear and readable, containing the whole fit note</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Choose and upload your fit note</h1>
 
-    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    <div class="govuk-form-group govuk-form-group--error">
 
+      <span id="dev-error-clear-email" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> The selected file must be clear and readable, containing the whole fit note
+  </span>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
     <div class="govuk-!-padding-bottom-4"></div>
 
     <p>Your photo will go through a technical check.</p>
@@ -37,7 +55,7 @@ Choose a file to upload - Send your fit note - GOV.UK
     <ul class="govuk-list govuk-list--bullet">
       <li>the file must be a JPG, BMP, PNG, TIF or PDF</li>
       <li>the file must be smaller than 10MB</li>
-      <li>all 4 corners of the fit note must be visible within the file</li></ul>
+      <li>all 4 corners of the fit note must be visible within the image</li></ul>
 
     <div class="govuk-!-padding-bottom-1"></div>
 
@@ -63,7 +81,7 @@ Choose a file to upload - Send your fit note - GOV.UK
         <p class="govuk-body">You do note need a postage stamp. Make sure you keep a copy of your fit note for your own records.</p>      </div>
     </details>
 
-    <form class="form" action="/v12-scanning-photo-sms-error" method="post">
+    <form class="form" action="/v12-scanning-photo-paper" method="post">
       <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>
@@ -71,7 +89,7 @@ Choose a file to upload - Send your fit note - GOV.UK
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <div class="govuk-inset-text">
-      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <h5 class="govuk-heading-m">Talk to an advisor</h5>
       <ul class="govuk-list">
         <li>Telephone: 0800 169 0310</li>
         <li>Textphone: 0800 169 0314</li>
