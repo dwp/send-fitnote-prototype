@@ -21,11 +21,10 @@ Choose a file to upload - Send your fit note - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Choose a file to upload</h1>
+    <h1 class="govuk-heading-xl">Choose and upload your fit note</h1>
 
-    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-
-    <div class="govuk-!-padding-bottom-4"></div>
+    <form class="form" action="/v12-scanning-photo-paper" method="post">
+      <button class="govuk-button" data-module="govuk-button">Choose and upload your fit note</button></form>
 
     <p>Your photo will go through a basic technical check.</p>
 
@@ -65,9 +64,6 @@ Choose a file to upload - Send your fit note - GOV.UK
 
       </div>
     </details>
-
-    <form class="form" action="/v12-scanning-photo-paper" method="post">
-      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>
 

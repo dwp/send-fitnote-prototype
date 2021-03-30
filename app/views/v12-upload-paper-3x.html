@@ -14,17 +14,18 @@ Choose a file to upload - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v12-upload-sms-1">Back</a>
+  <a class="govuk-back-link" href="v12-upload-paper-1">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Choose and upload your fit note</h1>
+    <h1 class="govuk-heading-xl">Choose a file to upload</h1>
 
-    <form class="form" action="/v12-scanning-photo-sms" method="post">
-      <button class="govuk-button" data-module="govuk-button">Choose and upload your fit note</button></form>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+    <div class="govuk-!-padding-bottom-4"></div>
 
     <p>Your photo will go through a basic technical check.</p>
 
@@ -36,7 +37,7 @@ Choose a file to upload - Send your fit note - GOV.UK
     <ul class="govuk-list govuk-list--bullet">
       <li>the file must be a JPG, BMP, PNG, TIF or PDF</li>
       <li>the file must be smaller than 10MB</li>
-      <li>all 4 corners of the fit note must be within the file</li></ul>
+      <li>all 4 corners of the fit note must be within the image</li></ul>
 
     <div class="govuk-!-padding-bottom-1"></div>
 
@@ -64,6 +65,9 @@ Choose a file to upload - Send your fit note - GOV.UK
 
       </div>
     </details>
+
+    <form class="form" action="/v12-scanning-photo-paper" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>
 
