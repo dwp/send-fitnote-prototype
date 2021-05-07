@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose a file to upload - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v13a-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Upload your fit note</h1>
+
+    <p>Follow these instructions to upload your fit note:</p>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your email sent to you by your doctor or GP practice containing your fit note.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download the fit note which was attached on your email. This may automatically be added to your 'Downloads', Recents' or 'Saved As' folder.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Upload your fit note.</li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <h2 class="govuk-heading-l">Choose a file to upload</h2>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+    <div class="govuk-!-padding-bottom-4"></div>
+
+    <p>Your photo will go through a basic technical check.</p>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+
+    <h3 class="govuk-heading-m">In order to upload your fit note successfully:</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the file must be a JPG, BMP. PNG, TIF or PDF</li>
+      <li>the file must be smaller than 10MB</li>
+      <li>all 4 corners of the fit note must be within the file</li></ul>
+
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I am having difficulty in uploading my fit note
+    </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+        <p class="govuk-body">If you have difficulty in uploading your fit note, post your fit note to:</p>
+
+        <div class="govuk-inset-text">
+          <ul class="govuk-list">
+            <li>Freepost DWP</li>
+            <li>ESA 26</li>
+          </ul>
+        </div>
+
+        <p class="govuk-body">You do note need a postage stamp. Make sure you keep a copy of your fit note for your own records.</p>      </div>
+
+    </details>
+
+    <form class="form" action="/v13a-scanning-photo-paper" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

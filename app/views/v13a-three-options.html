@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How did you get your fit note - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v13a-does-your-fit-note-have-a-signature">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v13a-three-options-select" method="POST">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How did you get your fit note?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v13a-obtained-fit-note" name="v13a-obtained-fit-note" type="radio" value="paper">
+                <label class="govuk-label govuk-radios__label" for="v13a-obtained-fit-note">
+                  Paper copy from my doctor
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v13a-obtained-fit-note-2" name="v13a-obtained-fit-note" type="radio" value="sms">
+                <label class="govuk-label govuk-radios__label" for="v13a-obtained-fit-note-2">
+                  Text message with a link
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v13a-obtained-fit-note-3" name="v13a-obtained-fit-note" type="radio" value="email">
+                <label class="govuk-label govuk-radios__label" for="v13a-obtained-fit-note-3">
+                  Email with an attachment
+                </label>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Talk to an advisor</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0310</li>
+          <li>Textphone: 0800 169 0314</li>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+        </ul>
+
+      </div>
+
+  </div>
+
+{% endblock %}
