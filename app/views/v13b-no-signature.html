@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your fit note must be signed by a doctor to process your claim - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v13b-does-your-fit-note-have-a-signature">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Your fit note must be signed by a doctor to process your claim</h1>
+
+    <h2 class="govuk-heading-m">Unsigned fit notes</h2>
+
+    <p class="govuk-body">
+      If your fit note is not signed by the doctor, your claim will not be processed.</p>
+
+    <h2 class="govuk-heading-m">Next steps</h2>
+
+    <p class="govuk-body">
+      Contact your doctor for a signed fit note.</p>
+
+    <p><a href="/v13b-start">Go back to Send your fit note</a></p>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h3 class="govuk-heading-m">Talk to an advisor</h3>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
+</div>

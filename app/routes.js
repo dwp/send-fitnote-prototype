@@ -413,6 +413,163 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
 
 
 
+                                                router.route('/v13a-do-you-have-a-fit-note')
+                                             .post((req, res, next) => {
+                                               let redirectUrl
+                                               // console.table(req.body)
+                                               switch (req.body['v13a-do-you-have-a-fit-note']) {
+                                                 case 'yes':
+                                                   redirectUrl = 'v13a-does-your-fit-note-have-a-signature'
+                                                   break
+                                                 case 'no':
+                                                   redirectUrl = 'v13a-no-fit-note'
+                                                   break
+                                                 default:
+                                                   redirectUrl = req.path
+                                                   break
+                                               }
+                                               res.redirect(redirectUrl)
+                                             })
+
+
+                                                router.route('/v13a-does-your-fit-note-have-a-signature')
+                                                   .post((req, res, next) => {
+                                                     let redirectUrl
+                                                     // console.table(req.body)
+                                                     switch (req.body['v13a-does-your-fit-note-have-a-signature']) {
+                                                       case 'yes':
+                                                         redirectUrl = 'v13a-three-options'
+                                                         break
+                                                       case 'no':
+                                                         redirectUrl = 'v13a-no-signature'
+                                                         break
+                                                       default:
+                                                         redirectUrl = req.path
+                                                         break
+                                                     }
+                                                     res.redirect(redirectUrl)
+                                                   })
+
+
+                                                router.route('/v13a-fit-note-template')
+                                                   .post((req, res, next) => {
+                                                     let redirectUrl
+                                                     // console.table(req.body)
+                                                     switch (req.body['v13a-fit-note-template']) {
+                                                       case 'yes':
+                                                         redirectUrl = 'v13a-upload-paper-1'
+                                                         break
+                                                       case 'no':
+                                                         redirectUrl = 'v13a-wrong-template'
+                                                         break
+                                                       default:
+                                                         redirectUrl = req.path
+                                                         break
+                                                     }
+                                                     res.redirect(redirectUrl)
+                                                   })
+
+
+
+                                             router.route('/v13a-three-options-select')
+                                               .post((req, res, next) => {
+                                                 let redirectUrl
+                                                 switch (req.body['v13a-obtained-fit-note']) {
+                                                   case 'paper':
+                                                     redirectUrl = 'v13a-upload-paper'
+                                                     break
+                                                   case 'sms':
+                                                     redirectUrl = 'v13a-upload-sms'
+                                                     break
+                                                   case 'email':
+                                                     redirectUrl = 'v13a-upload-email'
+                                                     break
+                                                   default:
+                                                     redirectUrl = req.path
+                                                     break
+                                                 }
+                                                 res.redirect(redirectUrl)
+                                               })
+
+
+                                                router.route('/v13b-do-you-have-a-fit-note')
+                                             .post((req, res, next) => {
+                                               let redirectUrl
+                                               // console.table(req.body)
+                                               switch (req.body['v13b-do-you-have-a-fit-note']) {
+                                                 case 'yes':
+                                                   redirectUrl = 'v13b-does-your-fit-note-have-a-signature'
+                                                   break
+                                                 case 'no':
+                                                   redirectUrl = 'v13b-no-fit-note'
+                                                   break
+                                                 default:
+                                                   redirectUrl = req.path
+                                                   break
+                                               }
+                                               res.redirect(redirectUrl)
+                                             })
+
+
+                                                router.route('/v13b-does-your-fit-note-have-a-signature')
+                                                   .post((req, res, next) => {
+                                                     let redirectUrl
+                                                     // console.table(req.body)
+                                                     switch (req.body['v13b-does-your-fit-note-have-a-signature']) {
+                                                       case 'yes':
+                                                         redirectUrl = 'v13b-three-options'
+                                                         break
+                                                       case 'no':
+                                                         redirectUrl = 'v13b-no-signature'
+                                                         break
+                                                       default:
+                                                         redirectUrl = req.path
+                                                         break
+                                                     }
+                                                     res.redirect(redirectUrl)
+                                                   })
+
+
+                                                router.route('/v13b-fit-note-template')
+                                                   .post((req, res, next) => {
+                                                     let redirectUrl
+                                                     // console.table(req.body)
+                                                     switch (req.body['v13b-fit-note-template']) {
+                                                       case 'yes':
+                                                         redirectUrl = 'v13b-upload-paper'
+                                                         break
+                                                       case 'no':
+                                                         redirectUrl = 'v13b-wrong-template'
+                                                         break
+                                                       default:
+                                                         redirectUrl = req.path
+                                                         break
+                                                     }
+                                                     res.redirect(redirectUrl)
+                                                   })
+
+
+
+                                             router.route('/v13b-three-options-select')
+                                               .post((req, res, next) => {
+                                                 let redirectUrl
+                                                 switch (req.body['v13b-obtained-fit-note']) {
+                                                   case 'paper':
+                                                     redirectUrl = 'v13a-upload-paper'
+                                                     break
+                                                   case 'sms':
+                                                     redirectUrl = 'v13b-upload-sms'
+                                                     break
+                                                   case 'email':
+                                                     redirectUrl = 'v13b-upload-email'
+                                                     break
+                                                   default:
+                                                     redirectUrl = req.path
+                                                     break
+                                                 }
+                                                 res.redirect(redirectUrl)
+                                               })
+
 
 
 module.exports = router
