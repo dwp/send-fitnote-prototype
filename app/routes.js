@@ -555,7 +555,7 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                  let redirectUrl
                                                  switch (req.body['v13b-obtained-fit-note']) {
                                                    case 'paper':
-                                                     redirectUrl = 'v13a-upload-paper'
+                                                     redirectUrl = 'v13b-upload-paper'
                                                      break
                                                    case 'sms':
                                                      redirectUrl = 'v13b-upload-sms'
