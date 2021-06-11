@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose a file to upload - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Upload your fit note</h1>
+
+    <h2 class="govuk-heading-l">Choose your fit note</h2>
+
+    <p>By clicking 'Choose File' you can upload a picture or scan of your fit note directly from your phone, tablet or computer. For phone and tablet users you also have the option to directly take a photo of your fit note.</p>
+
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+    <div class="govuk-!-padding-bottom-4"></div>
+
+    <p><a href="/index">Guidance on uploading your fit note</a></p>
+    
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Make sure that the image of your fit note is 'landscape', not blurred and has no shadows.
+      </strong>
+    </div>
+
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+
+    <h3 class="govuk-heading-m">To successfully upload your fit note:</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the file must be a JPG, BMP, PNG, TIF or PDF</li>
+      <li>the file must be smaller than 10MB</li>
+      <li>all 4 corners of the fit note must be visible within the image</li></ul>
+
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I am having difficulty in uploading my fit note
+    </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <p class="govuk-body">If you have difficulty in uploading your fit note, post your fit note to:</p>
+
+        <div class="govuk-inset-text">
+          <ul class="govuk-list">
+            <li>Freepost DWP</li>
+            <li>ESA 26</li>
+          </ul>
+        </div>
+
+        <p class="govuk-body">You do note need a postage stamp. Make sure you keep a copy of your fit note for your own records.</p>      </div>
+    </details>
+
+    <form class="form" action="/index" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h5 class="govuk-heading-m">Talk to an advisor</h5>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

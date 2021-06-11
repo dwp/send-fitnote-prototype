@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose a file to upload - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Fit note upload guidance</h1>
+
+    <p>If you are uploading a picture of your fit note, use this guidance to make sure that your fit note is clear and visible.</p>
+
+    <h2 class="govuk-heading-m">Hold your device directly above the fit note</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>it is best to hold the device about 20cm / 1 foot above the fit note</li>
+      <li>avoid taking the photo at an angle</li>
+      <li>hold the device directly above the fit note</li></ul>
+
+    <style>
+            .both-scans {max-width: 100%}
+            .both-scans {max-height: auto}
+            </style>
+    <img src="/public/images/both-scans.png" class="both-scans" alt="Incorrectly taking a photograph from a side angle and correctly from above">
+
+    <div class="govuk-!-padding-bottom-4"></div>
+
+    <h2 class="govuk-heading-m">Find a well lit place and avoid shadows</h2>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>make sure your fit note is well lit</li>
+        <li>the device screen is bright enough to see the image of your fit note clearly</li>
+        <li>nothing is between your fit note and the light to avoid any shadows</li>
+      </ul>
+      </ol>
+      <style>
+            .fit-note-shadow {max-width: 100%}
+            .fit-note-shadow {max-height: auto}
+            </style>
+      <img src="/public/images/fit-note-shadow.png" class="fit-note-shadow" alt="Incorrectly having a photograph with a shadow and a correct clear photograph">
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+    <h2 class="govuk-heading-m">Make sure your fit note is sideways or 'landscape'</h2>
+
+    <div class="govuk-text"><p>Ensure that your image includes your whole fit note by holding your device sideways or 'landscape'.</p></div>
+    <ol class="app-step-nav__list " data-length="1">
+      <li class="app-step-nav__list-item js-list-item "></li>
+      <style>
+            .fit-note-landscape {max-width: 100%}
+            .fit-note-landscape {max-height: auto}
+            </style>
+      <img src="/public/images/fit-note-landscape.png" class="fit-note-landscape" alt="An incorrect photograph of a landscape fit note taken portrait and correctly landscape">
+      <div class="govuk-!-padding-bottom-1"></div>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-4"></div>
+
+    <h2 class="govuk-heading-m">Make sure the whole fit note is in the photo</h2>
+
+    <div class="govuk-text"><p>Ensure that your image includes your whole fit note. It should fill the photo and all 4 corners should be inside it.</p></div>
+    <style>
+            .fit-note-zoom {max-width: 100%}
+            .fit-note-zoom {max-height: auto}
+            </style>
+    <img src="/public/images/fit-note-zoom.png" class="fit-note-zoom" alt="An incorrect photograph of a zoomed in fit note and a correct clear photograph of a fit note">
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <h2 class="govuk-heading-m">Make sure the image is clear and not blurred</h2>
+
+    <div class="govuk-text"><p>A clear image will help us to better access your fit note.</p>
+    <p>If you are not sure how to get a clear, sharp image, please check your device manual.</p>
+    <style>
+            .fit-note-blur {max-width: 100%}
+            .fit-note-blur {max-height: auto}
+            </style>
+    <img src="/public/images/fit-note-blur.png" class="fit-note-blur" alt="Incorrect blurred photograph and a correct clear photograph">
+
+    <div class="govuk-!-padding-bottom-4"></div>
+    </div>
+
+
+    <form class="form" action="/index" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h5 class="govuk-heading-m">Talk to an advisor</h5>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

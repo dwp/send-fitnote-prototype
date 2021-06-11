@@ -571,5 +571,40 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                })
 
 
+                                            router.route('/v15-do-you-have-a-fit-note')
+                                             .post((req, res, next) => {
+                                               let redirectUrl
+                                               // console.table(req.body)
+                                               switch (req.body['v15-do-you-have-a-fit-note']) {
+                                                 case 'yes':
+                                                   redirectUrl = 'v15-two-options'
+                                                   break
+                                                 case 'no':
+                                                   redirectUrl = 'v15-no-fit-note'
+                                                   break
+                                                 default:
+                                                   redirectUrl = req.path
+                                                   break
+                                               }
+                                               res.redirect(redirectUrl)
+                                             })
+
+                                             router.route('/v15-two-options')
+                                               .post((req, res, next) => {
+                                                 let redirectUrl
+                                                 switch (req.body['v15-obtained-fit-note']) {
+                                                   case 'paper':
+                                                     redirectUrl = 'v15-upload-paper-version-1'
+                                                     break
+                                                   case 'digital':
+                                                     redirectUrl = 'v15-upload-digital-version-1'
+                                                     break
+                                                   default:
+                                                     redirectUrl = req.path
+                                                     break
+                                                 }
+                                                 res.redirect(redirectUrl)
+                                               })
+
 
 module.exports = router

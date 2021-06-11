@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Only a fit note can be uploaded and processed by this service - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v15-do-you-have-a-fit-note">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">We can only accept a fit note (or a Statement of fitness for work)</h1>
+
+    <p class="govuk-body">
+      You may have a different type of medical evidence such as a medical letter, a MED 10 or an isolation note.</p>
+
+    <p>Unfortunately, these cannot be uploaded. You will need to post them to us.</p>
+
+<p>If you need a fit note, you can get one from your GP or doctor's surgery.</p>
+
+      <!DOCTYPE html>
+      <style>
+
+            .not-accepted {max-width: 100%}
+            .not-accepted {max-height: auto}
+    </style>
+      <img src="/public/images/not-accepted.png" class="not-accepted" alt="Examples of a medical letter, isolation note and a MED 10 form">
+      </html>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <h1 class="govuk-heading-m">Where to send your medical evidence</h1>
+    <p class="govuk-body">If you have alternative medical evidence, post it directly to ESA using the address:</p>
+
+    <div class="govuk-inset-text">
+    <ul class="govuk-list">
+      <li>Freepost DWP</li>
+      <li>ESA 26</li>
+    </ul>
+    </div>
+
+    <p class="govuk-body">You do not need a postage stamp. Make sure you keep a copy of any medical evidence for your own record.</p>
+
+    <p><a href="/v13a-start">Go back to Send your fit note</a></p>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
+</div>
