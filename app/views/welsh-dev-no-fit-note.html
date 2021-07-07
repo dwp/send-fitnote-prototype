@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Step by step navigation
+Dim ond nodyn ffitrwydd gall gael ei uwchlwytho a’i brosesu gan y gwasanaeth hwn
 {% endblock %}
 
 {% block pageScripts %}
@@ -24,7 +24,11 @@
     <h1 class="govuk-heading-l">Dim ond nodyn ffitrwydd gall gael ei uwchlwytho a’i brosesu gan y gwasanaeth hwn</h1>
 
     <p class="govuk-body">
-      Os nad oes gennych nodyn ffitrwydd ac mae angen un arnoch, cysylltwch â’ch meddyg neu feddygfa. Mae’r canlynol yn enghreifftiau o lythyr meddygol, nodyn ynysu a MED 10, nid ydynt yn nodyn ffitrwydd ac ni allant gael eu uwchlwytho i’r gwasanaeth hwn.</p>
+      Os nad nodyn ffitrwydd yw eich dogfen, gallai fod yn ffurf gwahanol o dystiolaeth feddygol fel llythyr meddygol, nodyn hunan-ynysu neu MED 10. </p>
+
+    <p> Nid yw’r rhain yn nodiadau ffitrwydd ac ni ellir eu llwytho i’r gwasanaeth.</p>
+
+<p>Os ydych angen nodyn ffitrwydd, cysylltwch â’ch meddyg neu feddygfa.</p>
 
       <!DOCTYPE html>
       <style>
@@ -32,48 +36,38 @@
             .not-accepted {max-width: 100%}
             .not-accepted {max-height: auto}
     </style>
-      <img src="/public/images/not-accepted.png" class="not-accepted" alt="Enghreifftiau o lythyr meddygol, nodyn ynysu a MED10">
+      <img src="/public/images/not-accepted.png" class="not-accepted" alt="Examples of a medical letter, isolation note and a MED 10 form">
       </html>
 
     <div class="govuk-!-padding-bottom-3"></div>
-    <p>Fodd bynnag, gallwch bostio tystiolaeth feddygol arall, fel llythyr meddygol, nodyn ynysu neu MED 10 i Freepost DWP ESA 26. Sicrhewch fod gennych gopi neu gopi dyblyg o’ch tystiolaeth cyn anfon eich tystiolaeth.</p>
 
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Sut i bostio tystiolaeth feddygol
-    </span>
-      </summary>
-      <div class="govuk-details__text">
-        Gall tystiolaeth feddygol gael ei bostio’n uniongyrchol i ESA gan ddefnyddio’r cyfeiriad Freepost DWP ESA 26. Nid oes angen stamp arnoch.
-        <div class="govuk-!-padding-bottom-4"></div>
-        <!DOCTYPE html>
-        <style>
-                              .freepost-letter {max-width: 40%}
-                              .freepost-letter {max-height: auto}
-                          </style>
-        <img src="/public/images/freepost-letter.png" class="freepost-letter" alt="Amlen bost gyda'r cyfeiriad post">
-        </html>
-      </div>
-    </details>
+    <h1 class="govuk-heading-m">Ble i anfon eich tystiolaeth feddygol</h1>
+    <p class="govuk-body">Os oes gennych ffurf gwahanol o dystiolaeth feddygol, dylech ei phostio’n uniongyrchol i ESA drwy ddefnyddio’r cyfeiriad:</p>
 
+    <div class="govuk-inset-text">
+    <ul class="govuk-list">
+      <li>Freepost DWP</li>
+      <li>ESA 26</li>
+    </ul>
+    </div>
 
-    <form class="form" action="/welsh-dev-start" method="post">
-      <button class="govuk-button" data-module="govuk-button">Dychwelyd i’r dudalen cychwynnol</button></form>
+    <p class="govuk-body">Nid ydych angen stamp. Gwnewch yn siwr eich bod yn cadw copi o unrhyw dystiolaeth feddygol ar gyfer eich cofnodion chi.</p>
+
+    <p><a href="/welsh-dev-start">Dychwelyd i’r dudalen cychwynnol</a></p>
 
   </div>
 
   <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <div class="govuk-inset-text">
-      <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
-      <ul class="govuk-list">
-        <li>Ffôn: 0800 169 0310</li>
-        <li>Ffôn testun: 0800 169 0314</li>
-        <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
-      </ul>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
+        <ul class="govuk-list">
+          <li>Ffôn: 0800 169 0310</li>
+          <li>Ffôn testun: 0800 169 0314</li>
+          <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
 </div>
 

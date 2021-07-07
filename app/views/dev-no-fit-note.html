@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Not a fit note - Send your fit note - GOV.UK
+Only a fit note can be uploaded and processed by this service - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block pageScripts %}
@@ -21,10 +21,14 @@ Not a fit note - Send your fit note - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Only a fit note can be uploaded and processed by this service</h1>
+    <h1 class="govuk-heading-l">We can only accept a fit note (or a Statement of fitness for work)</h1>
 
     <p class="govuk-body">
-      If you do not have a fit note and do require one, get in touch with your doctor or GP practice. The following are examples of a medical letter, isolation note and MED 10, they are not fit notes and cannot be uploaded onto this service.</p>
+      If your document is not a fit note, it could be an alternative form of medical evidence such as a medical letter, an isolation note or a MED 10. </p>
+
+    <p>These are not fit notes and cannot be uploaded onto this service.</p>
+
+<p>If you require a fit note, contact your doctor or GP practice.</p>
 
       <!DOCTYPE html>
       <style>
@@ -36,30 +40,20 @@ Not a fit note - Send your fit note - GOV.UK
       </html>
 
     <div class="govuk-!-padding-bottom-3"></div>
-    <p>However you can post alternative medical evidence, such as a medical letter, isolation note or MED 10 to Freepost DWP ESA 26. Ensure that you have a copy or duplicate of your medical evidence before sending it.</p>
 
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      How to post medical evidence
-    </span>
-      </summary>
-      <div class="govuk-details__text">
-        Medical evidence can be posted directly to ESA using the address Freepost DWP ESA 26. You do not need a postage stamp.
-        <div class="govuk-!-padding-bottom-4"></div>
-        <!DOCTYPE html>
-        <style>
-                              .freepost-letter {max-width: 40%}
-                              .freepost-letter {max-height: auto}
-                          </style>
-        <img src="/public/images/freepost-letter.png" class="freepost-letter" alt="Postal envelope with the postal address">
-        </html>
-      </div>
-    </details>
+    <h1 class="govuk-heading-m">Where to send your medical evidence</h1>
+    <p class="govuk-body">If you have alternative medical evidence, post it directly to ESA using the address:</p>
 
+    <div class="govuk-inset-text">
+    <ul class="govuk-list">
+      <li>Freepost DWP</li>
+      <li>ESA 26</li>
+    </ul>
+    </div>
 
-    <form class="form" action="/dev-start" method="post">
-      <button class="govuk-button" data-module="govuk-button">Return to start page</button></form>
+    <p class="govuk-body">You do not need a postage stamp. Make sure you keep a copy of any medical evidence for your own record.</p>
+
+    <p><a href="/dev-start">Go back to Send your fit note</a></p>
 
   </div>
 
