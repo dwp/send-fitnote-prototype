@@ -14,32 +14,34 @@ Choose a file to upload - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="v15-two-options">Back</a>
+  <a class="govuk-back-link" href="v15-upload-digital-version-1">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">How to upload your digital fit note</h1>
+    <h1 class="govuk-heading-xl">Upload your digital fit note</h1>
+
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+    <div class="govuk-!-padding-bottom-5"></div>
 
 
-    <ol class="govuk-list govuk-list--number">
-      <li>The fit note needs to be displayed as landscape (horizontal) not portrait (vertical).</li>
-      <div class="govuk-!-padding-bottom-1"></div>
-      <li>All the text must be able to be read.</li>
-      <div class="govuk-!-padding-bottom-1"></div>
-      <li>Make sure the whole fit note can be seen.</li>
-      <div class="govuk-!-padding-bottom-1"></div>
-      <li>It may be necessary to take a photo or crop it to create a landscape version. </li>
-    </ol>
+    <p>Your file:</p>
 
-    <div class="govuk-!-padding-bottom-2"></div>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>must be a JPG, BMP, PNG, TIF or PDF</li>
+      <li>must be smaller than 10MB</li>
+    </ul>
 
-    <form class="form" action="/v15-upload-digital-version-2" method="post">
-      <button class="govuk-button" data-module="govuk-button">Continue to upload</button></form>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <form class="form" action="/v15-scanning-digital" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
 
   </div>
+
 
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
