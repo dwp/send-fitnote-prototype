@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose a file to upload - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v16-upload-paper-version-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Upload your fit note</h1>
+
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+    <div class="govuk-!-padding-bottom-5"></div>
+
+
+    <p>Your file must be:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>a JPG, BMP PNG, TIF or PDF</li>
+      <li>smaller than 10MB</li>
+    </ul>
+
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <form class="form" action="/v16-error-upload-paper" method="post">
+      <button class="govuk-button" data-module="govuk-button">Upload file</button></form>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Get help</h2>
+        <ul class="govuk-list">
+          <li><a href="v16-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for Fit Note (opens in new tab)</a></li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Telephone</b></li>
+          <li>0800 169 0310</li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Textphone</b></li>
+          <li>0800 169 0314</li>
+        
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

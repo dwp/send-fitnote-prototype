@@ -606,5 +606,41 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                  res.redirect(redirectUrl)
                                                })
 
+                                               router.route('/v16-have-you-applied-for-esa')
+                                             .post((req, res, next) => {
+                                               let redirectUrl
+                                               // console.table(req.body)
+                                               switch (req.body['v16-have-you-applied-for-esa']) {
+                                                 case 'yes':
+                                                   redirectUrl = 'v16-two-options'
+                                                   break
+                                                 case 'no':
+                                                   redirectUrl = 'v16-no-esa'
+                                                   break
+                                                 default:
+                                                   redirectUrl = req.path
+                                                   break
+                                               }
+                                               res.redirect(redirectUrl)
+                                             })
+
+                                             router.route('/v16-two-options')
+                                               .post((req, res, next) => {
+                                                 let redirectUrl
+                                                 switch (req.body['v16-obtained-fit-note']) {
+                                                   case 'paper':
+                                                     redirectUrl = 'v16-upload-paper-version-1'
+                                                     break
+                                                   case 'digital':
+                                                     redirectUrl = 'v16-upload-digital-version-1'
+                                                     break
+                                                   default:
+                                                     redirectUrl = req.path
+                                                     break
+                                                 }
+                                                 res.redirect(redirectUrl)
+                                               })
+                                               
+
 
 module.exports = router

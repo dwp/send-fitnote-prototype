@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How did you get your fit note - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v16-have-you-applied-for-esa.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v16-two-options" method="POST">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What type of fit note do you have?
+              </h1>
+            </legend>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="v16-obtained-fit-note-2" name="v16-obtained-fit-note" type="radio" value="digital">
+              <label class="govuk-label govuk-radios__label" for="v16-obtained-fit-note-2">
+                Digital version (sent by text or email)
+              </label>
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v16-obtained-fit-note" name="v16-obtained-fit-note" type="radio" value="paper">
+                <label class="govuk-label govuk-radios__label" for="v16-obtained-fit-note">
+                  Paper version (physical or hard copy)
+                </label>
+              </div>
+              
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">Get help</h2>
+      <ul class="govuk-list">
+        <li><a href="v16-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for Fit Note (opens in new tab)</a></li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Telephone</b></li>
+          <li>0800 169 0310</li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Textphone</b></li>
+          <li>0800 169 0314</li>
+        
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+        </ul>
+
+      </div>
+
+  </div>
+
+{% endblock %}

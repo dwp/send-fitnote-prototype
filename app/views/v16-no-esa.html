@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Only a fit note can be uploaded and processed by this service - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v16-have-you-applied-for-esa.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">We can only process fit notes for New Style Employment and Support Allowance (ESA) claims.</h1>
+
+    <p class="govuk-body">
+      You must not use this if you  have applied for or get  another benefit such as Universal Credit.</p>
+
+      <p class="govuk-body">
+        See <a href="#">Universal Credit</a> to upload your Fit Note for your UC claim.</p>
+
+    
+
+ 
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Get help</h2>
+      <ul class="govuk-list">
+        <li><a href="v16-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for Fit Note (opens in new tab)</a></li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Telephone</b></li>
+          <li>0800 169 0310</li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Textphone</b></li>
+          <li>0800 169 0314</li>
+        
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}
+</div>
