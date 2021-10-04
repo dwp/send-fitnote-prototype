@@ -5,7 +5,7 @@ Check your details - Send your fit note - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="dev-text-message-email">Back</a>
+  <a class="govuk-back-link" href="dev-text-message-digital.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@ Check your details - Send your fit note - GOV.UK
             {{ data['national-insurance-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="dev-ni-number-email">
+            <a href="dev-ni-number-digital.html">
               Change
               <span class="govuk-visually-hidden"> National Insurance number</span>
             </a>
@@ -41,7 +41,7 @@ Check your details - Send your fit note - GOV.UK
             <br>{{ data['address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="dev-address-email">
+            <a href="dev-address-digital.html">
               Change
               <span class="govuk-visually-hidden"> Your address</span>
             </a>
@@ -55,7 +55,7 @@ Check your details - Send your fit note - GOV.UK
             {{ data['contact-by-phone'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="dev-text-message-email">
+            <a href="dev-text-message-digital.html">
               Change
               <span class="govuk-visually-hidden"> Confirmation text message</span>
             </a>
@@ -63,7 +63,7 @@ Check your details - Send your fit note - GOV.UK
         </div>
       </dl>
 
-      <form action="/dev-confirmation-email" method="post" novalidate>
+      <form action="/dev-confirmation-digital" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
