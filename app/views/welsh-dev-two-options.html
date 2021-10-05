@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page
+Sut fath o nodyn ffitrwydd sydd gennych? – Anfon eich nodyn ffitrwydd -  GOV.UK
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,48 +14,38 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/welsh-dev-three-options-select" method="POST">
+      <form class="form" action="/welsh-dev-two-options" method="POST">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Sut wnaethoch chi gael eich nodyn ffitrwydd?
+                Sut fath o nodyn ffitrwydd sydd gennych?
               </h1>
             </legend>
-            <div id="welsh-dev-three-options-select-hint" class="govuk-hint">
-              I sicrhau bod eich nodyn ffitrwydd wedi uwchlwytho’n gywir, dewiswch opsiwn.
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note-2" name="welsh-dev-obtained-fit-note" type="radio" value="digital">
+              <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note-2">
+                Fersiwn digidol (anfonwyd trwy neges destun neu e-bost)
+
+              </label>
             </div>
-
-            <div class="govuk-!-padding-bottom-2"></div>
-
             <div class="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note" name="welsh-dev-obtained-fit-note" type="radio" value="paper">
                 <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note">
-                  Copi Papur
+                  Fersiwn papur (copi caled)
                 </label>
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note-2" name="welsh-dev-obtained-fit-note" type="radio" value="sms">
-                <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note-2">
-                  Neges testun
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="welsh-dev-obtained-fit-note-3" name="welsh-dev-obtained-fit-note" type="radio" value="email">
-                <label class="govuk-label govuk-radios__label" for="welsh-dev-obtained-fit-note-3">
-                  E-bost
-                </label>
-              </div>
-
+              
+  
           </fieldset>
         </div>
-
+  
         <div class="govuk-!-padding-bottom-1"></div>
-
+  
         <button class="govuk-button" data-module="govuk-button">Parhau</button>
-
+  
       </form>
 
     </div>

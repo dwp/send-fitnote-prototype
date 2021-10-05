@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Cyn i chi lwytho eich nodyn ffitrwydd digidol - Anfon eich nodyn ffitrwydd -  GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="welsh-dev-two-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Cyn i chi lwytho eich nodyn ffitrwydd digidol</h1>
+
+
+    <ol class="govuk-list govuk-list--number">
+      <li class="govuk-!-padding-bottom-3">Gallwch ddefnyddio ffôn clyfar, llechen neu gamera. Neu gallwch ddefnyddio sganiwr wedi'i gysylltu â chyfrifiadur.</li>
+      
+      <li class="govuk-!-padding-bottom-3">Sicrhewch fod eich nodyn ffitrwydd mewn ffurf tirwedd (llorweddol) nid portread (fertigol).
+        <style>
+          .fit-note-zoom {max-width: 100%}
+          .fit-note-zoom {max-height: auto}
+          </style>
+    <img src="/public/images/fit-note-zoom.png" class="fit-note-zoom">
+      </li>
+      <li class="govuk-!-padding-bottom-3">Rhaid dangos y nodyn ffitrwydd cyfan. Mae angen iddo fod ar 1 dudalen A4.</li>
+   
+
+      <li class="govuk-!-padding-bottom-3">Edrychwch i weld bod y llun mewn ffocws ac y gellir darllen pob gair.</li>
+
+      
+    </ol>
+
+
+
+    <form class="form" action="/welsh-dev-upload" method="post">
+      <button class="govuk-button" data-module="govuk-button">Parhau i lwytho</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Siarad ag ymgynghorydd</h2>
+      <ul class="govuk-list">
+        <li>Ffôn: 0800 169 0310</li>
+        <li>Ffôn testun: 0800 169 0314</li>
+        <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

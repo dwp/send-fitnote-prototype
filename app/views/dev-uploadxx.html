@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Upload your fit note email - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="dev-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Upload your fit note</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Open your email sent to you by your doctor or GP practice containing your fit note.</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Download the fit note which was attached from your doctor or GP practice's email.
+        <ul class="govuk-list govuk-list--bullet">
+        </ul></li>
+      <li>Upload your fit note.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your fit note may be saved in your device's Downloads, Recents or Saved As folder</li>
+        </ul></li>
+    </ol>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+    <p>Your file will automatically be checked to make sure the quality is good enough.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the selected file must be a JPG, BMP, PNG, TIF or PDF</li>
+        <li>the selected file must be smaller than 10MB</li>
+        <li>ensure all 4 corners of the fit note are within the image</li></ul>
+
+
+
+    <h2 class="govuk-heading-l">Choose a file to upload</h2>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <form class="form" action="/dev-scanning-photo-email" method="post">
+      <button class="govuk-button" data-module="govuk-button">Upload file</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0310</li>
+        <li>Textphone: 0800 169 0314</li>
+        <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

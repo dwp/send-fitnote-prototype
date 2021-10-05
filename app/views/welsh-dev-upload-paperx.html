@@ -1,0 +1,255 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Step by step navigation
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="welsh-dev-three-options">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Uwchlwytho eich nodyn ffitrwydd</h1>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Cymerwch lun o’ch nodyn ffitrwydd neu ei sganio i’ch dyfais.</li>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <li>Sicrhewch:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>rydych mewn lle gyda digon o olau</li>
+          <li>bod y nodyn ffitrwydd cyfan yn y ddelwedd</li>
+        </ul></li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <li>Arbedwch y llun neu sgan o’ch nodyn ffitrwydd rhywle hawdd i’w ddod o hyd iddo ar eich dyfais.</li>
+    </ol>
+    <div class="govuk-!-padding-bottom-4"></div>
+    <style>
+            .both-scans {max-width: 100%}
+            .both-scans {max-height: auto}
+            </style>
+    <img src="/public/images/both-scans.png" class="both-scans" alt="Unigolyn yn tynnu llun o ongl ochr yn anghywir ac unigolyn arall yn tynnu ffotograff yn gywir oddi uchod">
+
+    <div class="govuk-!-padding-bottom-5"></div>
+    <p>Bydd eich ffeil yn cael ei gwirio'n awtomatig i sicrhau bod yr ansawdd yn ddigon da.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>mae’n rhaid i’r ffeil a ddewiswyd fod yn JPG, BMP, PNG, TIF neu PDF</li>
+        <li>mae’n rhaid i’r ffeil a ddewiswyd fod yn llai na 10MB</li>
+        <li>sicrhau bod pob un o 4 cornel y nodyn ffitrwydd yn cael eu cynnwys</li></ul>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Cael rhagor o gymorth i gael eich llun yn iawn
+    </span>
+      </summary>
+      <div class="govuk-!-padding-bottom-7"></div>
+      <h3 class="govuk-heading-m">Dilynwch y cyfarwyddiadau isod i’ch helpu i uwchlwytho eich nodyn ffitrwydd</h3>
+      <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Dangos" data-hide-text="Cuddio" data-show-all-text="Dangos pob un" data-hide-all-text="Cuddio popeth">
+        <ol class="app-step-nav__steps">
+          <li class="app-step-nav__step js-step" id="hold-the-device-directly-above-the-fit-note" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="1">
+              <h4 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 1
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Daliwch y ddyfais yn uniongyrchol uwchben y nodyn ffitrwydd
+              </span>
+              </h4>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-hold-the-device-directly-above-the-fit-note-1">
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>mae’n well dal y ddyfais tua 20cm neu 1 troedfedd uwchben y nodyn ffitrwydd</li>
+                <li>osgoi tynnu’r llun ar ongl</li>
+                <li>daliwch y ddyfais yn uniongyrchol uwchben y nodyn ffitrwydd</li></ul>
+
+              <style>
+            .both-scans {max-width: 100%}
+            .both-scans {max-height: auto}
+            </style>
+              <img src="/public/images/both-scans.png" class="both-scans" alt="Unigolyn yn tynnu llun o ongl ochr yn anghywir ac unigolyn arall yn tynnu ffotograff yn gywir oddi uchod">
+              <div class="govuk-!-padding-bottom-4"></div>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="Find-a-well-lit-place-and-avoid-shadows" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="2">
+              <h4 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 2
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Dewch o hyd i le wedi’i oleuo’n dda ac osgoi cysgodion
+              </span>
+              </h4>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-Find-a-well-lit-place-and-avoid-shadows-2">
+              <ol class="app-step-nav__list " data-length="1">
+                <li class="app-step-nav__list-item js-list-item ">
+                <li><b>Sicrhewch:</b>
+                  <div class="govuk-!-padding-bottom-3"></div>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>bod eich nodyn ffitrwydd wedi’i oleuo</li>
+                    <li>bod sgrin y dyfais yn digon olau i weld delwedd eich nodyn ffitrwydd yn glir</li>
+                    <li>nid oes unrhyw beth rhwng y nodyn ffitrwydd a’r golau er mwyn osgoi cysgodion</li>
+                  </ul>
+              </ol>
+              <style>
+            .fit-note-shadow {max-width: 100%}
+            .fit-note-shadow {max-height: auto}
+            </style>
+              <img src="/public/images/fit-note-shadow.png" class="fit-note-shadow" alt="Llun anghywir gyda chysgod mawr yn blocio cyd-destun y nodyn ffitrwydd ac enghraifft o sut y dylai llun o nodyn ffitrwydd edrych">
+              <div class="govuk-!-padding-bottom-1"></div>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="Make-sure-your-fit-note-is-sideways-or-landscape" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="3">
+              <h4 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 3
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Sicrhewch fod eich nodyn ffitrwydd ar ei ochr neu’n ‘landscape’
+              </span>
+              </h4>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-Make-sure-your-fit-note-is-sideways-or-landscape-2">
+              <div class="govuk-text"><p>Sicrhewch fod eich delwedd yn cynnwys y nodyn ffitrwydd cyfan trwy ddal eich dyfais ar ei ochr neu’n ‘landscape’.</p></div>
+              <ol class="app-step-nav__list " data-length="1">
+                <li class="app-step-nav__list-item js-list-item "></li>
+                <style>
+            .fit-note-landscape {max-width: 100%}
+            .fit-note-landscape {max-height: auto}
+            </style>
+                <img src="/public/images/fit-note-landscape.png" class="fit-note-landscape" alt="Ffôn symudol yn tynnu llun portread anghywir o nodyn ffitrwydd tirwedd a ffôn symudol yn tynnu llun tirwedd cywir o nodyn ffitrwydd tirwedd">
+                <div class="govuk-!-padding-bottom-1"></div>
+              </ol>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="book-and-manage-your-theory-test" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="5">
+              <h4 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 4
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Sicrhewch fod y nodyn ffitrwydd cyfan yn y llun
+              </span>
+              </h4>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
+              <p class="app-step-nav__paragraph">Sicrhewch fod eich delwedd yn cynnwys eich nodyn ffitrwydd cyfan. Dylai lenwi’r llun a dylai’r 4 cornel fod y tu fewn iddo.</p>
+              <style>
+            .fit-note-zoom {max-width: 100%}
+            .fit-note-zoom {max-height: auto}
+            </style>
+              <img src="/public/images/fit-note-zoom.png" class="fit-note-zoom" alt="Enghraifft o lun anghywir o nodyn ffitrwydd sydd wedi'i chwyddo i mewn ac nad yw'n cynnwys y nodyn ffitrwydd cyfan ochr yn ochr ag enghraifft dda o sut y dylai'r llun o'r nodyn ffitrwydd edrych.">
+              <div class="govuk-!-padding-bottom-1"></div>
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="make-sure-the-photo-isnt-blurred" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="6">
+              <h4 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 5
+                  </span>
+                </span>
+              </span>
+
+                <span class="js-step-title">
+                Sicrhewch fod y delwedd yn glir ac nid yn aneglur
+              </span>
+              </h4>
+            </div>
+
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-make-sure-the-photo-isnt-blurred-6">
+              <p class="app-step-nav__paragraph">Bydd delwedd clir yn ein helpu i gael mynediad gwell at eich nodyn ffitrwydd.</p>
+              <p>Os nad ydych yn siwr sut i gael delwedd clir, edrychwch yn lawlyfr eich dyfais.</p>
+              <style>
+            .fit-note-blur {max-width: 100%}
+            .fit-note-blur {max-height: auto}
+            </style>
+              <img src="/public/images/fit-note-blur.png" class="fit-note-blur" alt="Enghraifft o lun aneglur anghywir o nodyn ffitrwydd ochr yn ochr ag enghraifft gywir o lun clir o nodyn ffitrwydd">
+              <div class="govuk-!-padding-bottom-1"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </details>
+
+    <h2 class="govuk-heading-l">Dewiswch ffeil i uwchlwytho</h2>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <form class="form" action="/welsh-dev-scanning-photo-paper" method="post">
+      <button class="govuk-button" data-module="govuk-button">Llwytho ffeil</button></form>
+
+  </div>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-inset-text">
+      <h5 class="govuk-heading-m">Siarad ag ymgynghorydd</h5>
+      <ul class="govuk-list">
+        <li>Ffôn: 0800 169 0310</li>
+        <li>Ffôn testun: 0800 169 0314</li>
+        <li>Dydd Llun i ddydd Gwener, 8am i 6pm (ag eithrio gwyliau cyhoeddus)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    {% endblock %}

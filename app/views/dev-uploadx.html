@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="dev-do-you-have-a-fit-note">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-xl">Save and upload your fit note</h1>
+              <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-half">
+                      <ol class="govuk-list govuk-list--number">
+                          <li>Take a photo of your fit note or scan it to your computer</li>
+                          <div class="govuk-!-padding-bottom-3"></div>
+                          <li>Make sure:
+                              <ul class="govuk-list govuk-list--bullet">
+                                  <li>you're in a well lit place</li>
+                                  <li>all of your fit note is in the image</li>
+                              </ul></li>
+                          <div class="govuk-!-padding-bottom-3"></div>
+                          <li>Save the photo or scan of your fit note somewhere you can easily find it on your computer</li>
+                      </ol>
+                            <div class="govuk-!-padding-bottom-2"></div>
+                            <div><p>Your photo or scan will be automatically checked to make sure it's good enough.</p>
+                      <p><a href="dev-fit-note-help-1">Get more help to get your photo right</a></p></div>
+                  </div>
+                      <div class="govuk-grid-column-one-half">
+                          <!DOCTYPE html>
+                          <style>
+                              .beta {max-width: 100%}
+                              .beta {max-height: auto}
+                          </style>
+                          <img src="/public/images/fit-note-beta-image.jpg" class="beta" alt="User icon">
+                          </html>
+                      </div>
+              </div>
+
+              <div class="govuk-inset-text">
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>The selected file must be a JPG, BMP, PNG, TIF or PDF.</li>
+                      <li>The selected file must be smaller than 10MB.</li>
+                      <li><b>Do not upload a screenshot</b> of your fit note as it will not work.</li></ul>
+              </div>
+
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="file-upload-1">
+                      <h1>Choose a file to upload</h1>
+                  </label>
+                  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                  <div class="govuk-!-padding-bottom-5"></div>
+                  <form class="form" action="/dev-scanning-photo" method="post">
+                      <button class="govuk-button" data-module="govuk-button">Continue</button></form>
+              </div>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+              <div class="govuk-inset-text">
+                  <h2 class="govuk-heading-m">Talk to an advisor</h2>
+                  <ul class="govuk-list">
+                      <li>Telephone: 0800 169 0310</li>
+                      <li>Textphone: 0800 169 0314</li>
+                      <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+                  </ul>
+          </div>
+
+      </div>
+
+  </main>
+
+{% endblock %}

@@ -81,10 +81,10 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
           let redirectUrl
           switch (req.body['dev-obtained-fit-note']) {
             case 'paper':
-              redirectUrl = 'dev-upload-paper-version-1'
+              redirectUrl = 'dev-guidance-paper'
               break
             case 'digital':
-              redirectUrl = 'dev-upload-digital-version-1'
+              redirectUrl = 'dev-guidance-digital'
               break
           }
           res.redirect(redirectUrl)
@@ -96,7 +96,7 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                 // console.table(req.body)
                 switch (req.body['welsh-dev-do-you-have-a-fit-note']) {
                   case 'ydy':
-                    redirectUrl = 'welsh-dev-three-options'
+                    redirectUrl = 'welsh-dev-two-options'
                     break
                   case 'na':
                     redirectUrl = 'welsh-dev-no-fit-note'
@@ -109,15 +109,15 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
               })
 
 
-                    router.route('/welsh-dev-three-options-select')
+                    router.route('/welsh-dev-two-options')
                       .post((req, res, next) => {
                         let redirectUrl
                         switch (req.body['welsh-dev-obtained-fit-note']) {
                           case 'paper':
-                            redirectUrl = 'welsh-dev-upload-paper'
+                            redirectUrl = 'welsh-dev-guidance-paper'
                             break
-                          case 'sms':
-                            redirectUrl = 'welsh-dev-upload-sms'
+                          case 'digital':
+                            redirectUrl = 'welsh-dev-guidance-digital'
                             break
                           case 'email':
                             redirectUrl = 'welsh-dev-upload-email'
