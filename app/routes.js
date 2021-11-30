@@ -635,6 +635,23 @@ router.route('/v7b-additional-do-you-have-a-fit-note')
                                                  res.redirect(redirectUrl)
                                                })
                                                
+                                               router.route('/dev-have-you-applied-for-esa')
+                                               .post((req, res, next) => {
+                                                 let redirectUrl
+                                                 // console.table(req.body)
+                                                 switch (req.body['dev-have-you-applied-for-esa']) {
+                                                   case 'yes':
+                                                     redirectUrl = 'dev-two-options'
+                                                     break
+                                                   case 'no':
+                                                     redirectUrl = 'dev-no-esa'
+                                                     break
+                                                   default:
+                                                     redirectUrl = req.path
+                                                     break
+                                                 }
+                                                 res.redirect(redirectUrl)
+                                               })
 
 
 module.exports = router
