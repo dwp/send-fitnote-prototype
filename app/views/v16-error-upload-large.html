@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose a file to upload - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v16-upload-paper-version-2">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
+        <p class="govuk-body">Your file is too big to upload. It needs to be smaller than 10MB.</p>
+        <p class="govuk-body">Try to <a href="v16-start">send your fit note</a> again.</p>
+        
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+    {% endblock %}
