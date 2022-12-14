@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Have you applied for ESA - Send your fit note - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="v16-start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+  <p class="govuk-notification-banner__heading">
+    This service will be unavailable on Thursday 4 August 2022 until 9am on Friday 5 August 2022.
+  </p>
+  <p class="govuk-notification-banner__heading">
+    This is for planned maintenance.
+  </p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html
+}) }}
+      <form class="form" action="/v16-have-you-applied-for-esa" method="post">
+      <div class="govuk-form-group">
+        <div class="govuk-form-group">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="v16-have-you-applied-for-esa-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Have you applied for or do you get New Style Employment and Support Allowance (ESA)?
+                </h1>
+              </legend>
+
+              <div class="govuk-!-padding-bottom-4"></div>
+
+              <!DOCTYPE html>
+              <style>
+                              .one-page-fit-note {max-width: 100%}
+                              .one-page-fit-note {max-height: auto}
+        </style>
+                
+              </html>
+
+
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="v16-have-you-applied-for-esa" name="v16-have-you-applied-for-esa" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="v16-have-you-applied-for-esa">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="v16-have-you-applied-for-esa-2" name="v16-have-you-applied-for-esa" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="v16-have-you-applied-for-esa-2">
+                    No
+                  </label>
+                </div>
+              </div>
+
+                </div>
+
+
+          </fieldset>
+        </div>
+        <div class="govuk-!-padding-bottom-1"></div>
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+          </form>
+        </fieldset>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+       <h2 class="govuk-heading-m">Get help</h2>
+        <ul class="govuk-list">
+          <li><a href="v16-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for Fit Note (opens in new tab)</a></li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Telephone</b></li>
+          <li>0800 169 0310</li>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li><b>Textphone</b></li>
+          <li>0800 169 0314</li>
+        
+          <div class="govuk-!-padding-bottom-2"></div>
+          <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
+        </ul>
+      </div>
+
+  </div>
+
+
+{% endblock %}
